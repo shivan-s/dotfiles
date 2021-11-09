@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[user]
+	name = ShivanS93
+	email = shivan.sivakumaran@gmail.com
