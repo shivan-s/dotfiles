@@ -3,5 +3,10 @@
 [pull]
 	rebase = false
 [user]
-	name = ShivanS93
-	email = shivan.sivakumaran@gmail.com
+	name = Shivan Sivakumarnan
+	email = 51132467+ShivanS93@users.noreply.github.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

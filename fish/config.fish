@@ -5,4 +5,4 @@ set -gx PATH /$HOME/.local/bin:$PATH
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 
 set -gx CLICOLOR 1
-export LSCOLORS=Exfxcxdxbxegedabagacad
+set -gx LSCOLORS Exfxcxdxbxegedabagacad
