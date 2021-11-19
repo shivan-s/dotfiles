@@ -6,3 +6,5 @@ alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 
 set -gx CLICOLOR 1
 set -gx LSCOLORS Exfxcxdxbxegedabagacad
+
+fish_add_path /opt/homebrew/opt/node@16/bin
