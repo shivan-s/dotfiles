@@ -46,6 +46,10 @@ Run:
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 ```
 
+I am using bobthefish for my main machine (Source: https://github.com/oh-my-fish/theme-bobthefish)
+
+I am using default for servers.
+
 ## Installing tmux
 
 ```shell
