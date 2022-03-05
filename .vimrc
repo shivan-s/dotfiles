@@ -23,6 +23,7 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'jremmen/vim-ripgrep' " ripgrep search
 Plugin 'cespare/vim-toml' " toml highlighting
 Plugin 'junegunn/goyo.vim' " distraction free writing
+Plugin 'junegunn/limelight.vim' " highlights paragraphs
 
 call vundle#end()
 filetype plugin indent on
@@ -67,6 +68,11 @@ if executable('rg')
 endif
 let g:rg_command = 'rg --vimgrep -S'
 nnoremap <C-t> :Rg<CR>
+
+
+" limelight
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
 
 
 " # # # # # # # # 
