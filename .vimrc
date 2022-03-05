@@ -22,6 +22,7 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "
 Plugin 'jremmen/vim-ripgrep' " ripgrep search
 Plugin 'cespare/vim-toml' " toml highlighting
+Plugin 'junegunn/goyo.vim' " distraction free writing
 
 call vundle#end()
 filetype plugin indent on
@@ -93,9 +94,12 @@ set expandtab
 autocmd FileType python setlocal sw=4 ts=4 sts=4
 autocmd FileType javascript,javascriptreact,lua,html,htmldjango,yaml setlocal ts=2 sw=2 sts=2 expandtab
 
-" 80 char vertical line
+" 80 char vertical line and text wrapping
 let &colorcolumn=81
 highlight ColorColumn term=standout ctermbg=8
+set wrap 
+set nolist
+set linebreak
 
 " other
 set shell=/bin/bash " don't need fish in vim
