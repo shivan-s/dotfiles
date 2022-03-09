@@ -9,17 +9,18 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Required Plugin
+
+""" Required Plugin
+
 Plugin 'VundleVim/Vundle.vim'
 
-" Custom Plugins
+
+""" Custom Plugins
+
 Plugin 'psliwka/vim-smoothie' " Smooth Scrolling
 Plugin 'Yggdroot/indentLine' " Displays Indentation
 Plugin 'itchyny/lightline.vim' " Bottom Displays
-" fuzzy search finder
-Plugin 'junegunn/fzf.vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"
+Plugin 'junegunn/fzf.vim' "" fuzzy search finder
 Plugin 'jremmen/vim-ripgrep' " ripgrep search
 Plugin 'cespare/vim-toml' " toml highlighting
 Plugin 'junegunn/goyo.vim' " distraction free writing
@@ -33,7 +34,8 @@ filetype plugin indent on
 " Plugin settings
 " # # # # # # # # 
 
-" lightline
+""" lightline
+
 let g:lightline = {
 			\	'colorscheme': 'powerline',
 			\     'active': {
@@ -45,10 +47,14 @@ set laststatus=2
 set t_Co=256
 set noshowmode
 
-" indentLine
+
+""" indentLine
+
 let g:indentLine_cat = "⦙"
 
-" fzf
+
+""" fzf
+
 set rtp+=/.fzf
 nnoremap <silent> <C-p>  :Files<CR>
 nnoremap <silent> <C-e>  :Buffer<CR>
@@ -62,7 +68,10 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 autocmd! FileType fzf 
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
 			\| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-" ripgrep
+
+
+""" ripgrep
+
 if executable('rg')
 	set grepprg=rg\ --color=never
 endif
@@ -70,44 +79,69 @@ let g:rg_command = 'rg --vimgrep -S'
 nnoremap <C-t> :Rg<CR>
 
 
-" limelight
+""" goyo + limelight (focus mode)
+
+let g:goyo_width = 90
+let g:limelight_default_coefficient = 0.7
+
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
+
+map <leader>gy :Goyo <CR>
+map <leader>ll :Limelight!! <CR>
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+""" line cursor
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 
 " # # # # # # # # 
 " Extra settings
 " # # # # # # # #
 
-" key remaps
+""" key remaps
+
 noremap! <C-?> <C-H>
 
-" colour
+""" colour
+
 set background=dark
 
-" opening new files
+
+""" opening new files
+
+
 set nohidden
 
-" syntax and search
+""" syntax and search
+
 set hlsearch
 set incsearch
 set ignorecase
 set spell
 syntax on
 
-" tab spacing
+
+""" tab spacing
+
 set expandtab
 autocmd FileType python setlocal sw=4 ts=4 sts=4
 autocmd FileType javascript,javascriptreact,lua,html,htmldjango,yaml setlocal ts=2 sw=2 sts=2 expandtab
 
-" 80 char vertical line and text wrapping
+
+""" 80 char vertical line and text wrapping
+
 let &colorcolumn=81
 highlight ColorColumn term=standout ctermbg=8
 set wrap 
 set nolist
 set linebreak
 
-" other
+
+""" other
+
 set shell=/bin/bash " don't need fish in vim
 set confirm
 set title
