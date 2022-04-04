@@ -17,14 +17,47 @@ Plugin 'VundleVim/Vundle.vim'
 
 """ Custom Plugins
 
-Plugin 'psliwka/vim-smoothie' " Smooth Scrolling
-Plugin 'Yggdroot/indentLine' " Displays Indentation
-Plugin 'itchyny/lightline.vim' " Bottom Displays
-Plugin 'junegunn/fzf.vim' "" fuzzy search finder
+" Smooth Scrolling
+Plugin 'psliwka/vim-smoothie' 
+
+" Displays Indentation
+Plugin 'Yggdroot/indentLine' 
+
+" Bottom Displays
+Plugin 'itchyny/lightline.vim' 
+
+" Fuzzy Search Finder
+Plugin 'junegunn/fzf.vim' 
+
+" RipGrep Search
 Plugin 'jremmen/vim-ripgrep' " ripgrep search
+
+" Toml Highliting
 Plugin 'cespare/vim-toml' " toml highlighting
+
+" Distraction Free Writing
 Plugin 'junegunn/goyo.vim' " distraction free writing
+
+" Highlights Paragraphs
 Plugin 'junegunn/limelight.vim' " highlights paragraphs
+
+" Prettier Formatting
+Plugin 'prettier/vim-prettier', {
+        \ 'do': 'yarn install',
+        \ 'for': ['javascript', 
+        \         'typescript',
+        \         'css', 
+        \         'less', 
+        \         'scss',
+        \         'json', 
+        \         'graphql', 
+        \         'vue', 
+        \         'svelte', 
+        \         'yaml', 
+        \         'html'] }
+
+" Formatter for Python
+Plugin 'psf/black' " Black for python formatting
 
 call vundle#end()
 filetype plugin indent on
@@ -37,12 +70,12 @@ filetype plugin indent on
 """ lightline
 
 let g:lightline = {
-			\	'colorscheme': 'powerline',
-			\     'active': {
-				\         'left': [['mode', 'paste' ], ['readonly', 'relativepath', 'modified']],
-				\         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
-				\     }
-				\ }
+        \ 'colorscheme': 'powerline',
+        \ 'active': {
+        \ 'left': [['mode', 'paste' ], ['readonly', 'relativepath', 'modified']],
+        \ 'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
+        \     }
+        \ }
 set laststatus=2
 set t_Co=256
 set noshowmode
@@ -93,8 +126,19 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 """ line cursor
+
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+""" Prettier
+
+let g:prettier#quickfix_enabled = 0
+
+
+""" Black
+
+autocmd BufWritePre *.py execute ':Black'
+let g:black_linelength = 88
 
 
 " # # # # # # # # 
@@ -111,7 +155,6 @@ set background=dark
 
 
 """ opening new files
-
 
 set nohidden
 
