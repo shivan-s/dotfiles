@@ -188,4 +188,6 @@ set linebreak
 set shell=/bin/bash " don't need fish in vim
 set confirm
 set title
+set number
+set relativenumber
 
