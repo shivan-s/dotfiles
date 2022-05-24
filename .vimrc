@@ -59,6 +59,13 @@ Plugin 'prettier/vim-prettier', {
 " Formatter for Python
 Plugin 'psf/black' " Black for python formatting
 
+" Plugin to help with Hugo
+Plugin 'robertbasic/vim-hugo-helper'
+
+" Plugin in for Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'preservim/vim-markdown'
+
 call vundle#end()
 filetype plugin indent on
 
