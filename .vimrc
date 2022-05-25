@@ -148,6 +148,11 @@ let g:prettier#quickfix_enabled = 0
 autocmd BufWritePre *.py execute ':Black'
 let g:black_linelength = 88
 
+""" Vim Markdown
+let g:vim_markdown_fronmatter = 1
+autocmd FileType markdown normal zR
+
+
 
 " # # # # # # # # 
 " Extra settings
