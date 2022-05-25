@@ -27,6 +27,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'itchyny/lightline.vim' 
 
 " Fuzzy Search Finder
+Plugin 'junegunn/fzf' 
 Plugin 'junegunn/fzf.vim' 
 
 " RipGrep Search
