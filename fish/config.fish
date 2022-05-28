@@ -22,10 +22,11 @@ set -gx DJANGO_DEVELOPMENT yes
 # Go set up
 alias go="grc go"
 
-set -gx TERM xterm-256color
+# set -gx TERM xterm-256color
 
 # Fish commands
 alias la="ls -alt"
 alias rm="rm -i"
 alias cp="cp -i"
 alias firefox="open -a firefox"
+alias vim="nvim"

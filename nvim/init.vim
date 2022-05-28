@@ -1,0 +1,9 @@
+source $HOME/.config/nvim/plugins/sets.vim
+source $HOME/.config/nvim/plugins/plugins.vim
+source $HOME/.config/nvim/plugins/colours.vim
+source $HOME/.config/nvim/plugins/goyo.vim
+source $HOME/.config/nvim/plugins/telescope.vim
+source $HOME/.config/nvim/plugins/lightline.vim
+source $HOME/.config/nvim/plugins/coc.vim
+source $HOME/.config/nvim/plugins/languagetool.vim
+source $HOME/.config/nvim/plugins/vim-markdown.vim

@@ -149,10 +149,8 @@ autocmd BufWritePre *.py execute ':Black'
 let g:black_linelength = 88
 
 """ Vim Markdown
-let g:vim_markdown_fronmatter = 1
+let g:vim_markdown_frontmatter = 1
 autocmd FileType markdown normal zR
-
-
 
 " # # # # # # # # 
 " Extra settings
@@ -173,7 +171,7 @@ set nohidden
 
 """ syntax and search
 
-set hlsearch
+set nohlsearch
 set incsearch
 set ignorecase
 set spell
@@ -191,9 +189,6 @@ autocmd FileType javascript,javascriptreact,lua,html,htmldjango,yaml setlocal ts
 
 let &colorcolumn=81
 highlight ColorColumn term=standout ctermbg=8
-set wrap 
-set nolist
-set linebreak
 
 
 """ other
@@ -203,4 +198,5 @@ set confirm
 set title
 set number
 set relativenumber
+set guicursor=
 
