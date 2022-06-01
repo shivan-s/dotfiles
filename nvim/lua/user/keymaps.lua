@@ -66,5 +66,5 @@ keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>f", "<cmd>Format<CR>", opts)
 
 -- Toggleterm
-keymap("n", "<C-=>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
-keymap("n", "<C-->", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts)
+keymap("n", "<C-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<C-P>", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts)
