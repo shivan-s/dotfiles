@@ -1,6 +1,4 @@
 set -gx fish_greeting 'Welcome!'
-set -gx PATH /opt/homebrew/bin $PATH
-set -gx PATH /$HOME/.local/bin $PATH
 
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 status --is-interactive; and pyenv virtualenv-init - | source
@@ -9,6 +7,10 @@ set -gx CLICOLOR 1
 set -gx LSCOLORS Exfxcxdxbxegedabagacad
 
 fish_add_path /opt/homebrew/opt/node@16/bin
+fish_add_path /opt/homebrew/bin
+fish_add_path /$HOME/.local/bin
+fish_add_path /$HOME/.cargo/bin
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -25,8 +27,10 @@ alias go="grc go"
 # set -gx TERM xterm-256color
 
 # Fish commands
-alias la="ls -alt"
+alias la="ls -al"
 alias rm="rm -i"
 alias cp="cp -i"
 alias firefox="open -a firefox"
 alias vim="nvim"
+alias rvim="vim"
+alias gi="git add . && git commit -m 'init' && git push"
