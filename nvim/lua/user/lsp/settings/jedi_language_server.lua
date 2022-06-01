@@ -11,7 +11,7 @@ return {
         completion = {
           disableSnippets = false,
           resolveEagerly = false,
-          ignorePatterns = []
+          ignorePatterns = {}
         },
         diagnostic = {
           enable = true,
@@ -33,11 +33,19 @@ return {
     --        "statement" = { all = true, names = [], fullNames = []},
     --    },
       },
-        workspace = {
-          library = {
+      jediSettings = {
+        autoImportModules = {},
+        caseInsensitiveCompletion = true,
+        debug = false
+      },
+      markupKindPreferred = "markdown",
+      workspace = {
+        extraPaths = {},
+        symbols = {
+          ignoreFolders = {".nox", ".tox", ".venv", "__pycache__", "venv"},
+          maxSymbols = 20
         }
-
-      }
-	},
+      },
+    }
   }
 }
