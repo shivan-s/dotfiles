@@ -64,3 +64,7 @@ keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 
 -- Format
 keymap("n", "<leader>f", "<cmd>Format<CR>", opts)
+
+-- Toggleterm
+keymap("n", "<C-+>", "<cmd>_LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<C-->", "<cmd>_PYTHON_TOGGLE()<CR>", opts)
