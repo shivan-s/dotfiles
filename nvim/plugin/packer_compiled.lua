@@ -119,10 +119,20 @@ _G.packer_plugins = {
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  neogen = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/neogen",
+    url = "https://github.com/danymat/neogen"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -194,6 +204,11 @@ _G.packer_plugins = {
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/seoul256.vim",
     url = "https://github.com/junegunn/seoul256.vim"
   },
+  ["startup.nvim"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/startup.nvim",
+    url = "https://github.com/startup-nvim/startup.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -204,10 +219,25 @@ _G.packer_plugins = {
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["twilight.nvim"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
+  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

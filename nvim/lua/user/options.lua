@@ -3,7 +3,7 @@
 -- =======
 -- Inspiration: https://github.com/LunarVim/Neovim-from-scratch
 local options = {
-    hidden = true,
+	hidden = true,
 	backup = false,
 	clipboard = "unnamedplus",
 	cmdheight = 2,
@@ -13,7 +13,7 @@ local options = {
 	cursorline = true,
 	expandtab = true,
 	fileencoding = "utf-8",
-	guicursor="i:hor100",
+	guicursor = "i:hor100",
 	hlsearch = false,
 	ignorecase = true,
 	incsearch = true,
@@ -42,12 +42,12 @@ local options = {
 	wrap = false,
 }
 
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append("c")
 
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.cmd "set whichwrap+=<,>[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- Not working?
+vim.cmd("set whichwrap+=<,>[,],h,l")
+vim.cmd([[set iskeyword+=-]])
+vim.cmd([[set formatoptions-=cro]]) -- Not working?

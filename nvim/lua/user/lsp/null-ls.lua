@@ -9,14 +9,19 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-        -- TS/JS
-		formatting.prettier,
+		-- TS/JS
 		diagnostics.eslint,
-        -- Python
-		formatting.black,
-        formatting.isort,
+		formatting.prettier,
+		-- Python
 		diagnostics.flake8,
-        -- Lua
+		diagnostics.mypy,
+		diagnostics.pydocstyle,
+		formatting.black,
+		formatting.isort,
+		-- Lua
 		formatting.stylua,
+		-- Markdown
+		diagnostics.markdownlint,
+		diagnostics.proselint,
 	},
 })

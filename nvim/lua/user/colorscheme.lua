@@ -8,6 +8,6 @@ seoul_command = [[
 local status_ok, _ = pcall(vim.cmd, seoul_command)
 
 if not status_ok then
-  vim.notify("Seoul256 Not Found!")
-  return
+	vim.notify("Seoul256 Not Found!")
+	return
 end

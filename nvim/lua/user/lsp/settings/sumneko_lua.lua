@@ -4,17 +4,17 @@ return {
 		Lua = {
 			diagnostics = {
 				globals = { "vim" },
-        needFileStatus = {
-          ["codestyle-check"] = "Any",
-        }
+				needFileStatus = {
+					["codestyle-check"] = "Any",
+				},
 			},
-            format = {
-        enable = true,
-      defaultConfig = {
-        indent_style = "space",
-        indent_size = "2",
-      }
-      },
+			format = {
+				enable = true,
+				defaultConfig = {
+					indent_style = "space",
+					indent_size = "2",
+				},
+			},
 			workspace = {
 				library = {
 					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
@@ -24,5 +24,3 @@ return {
 		},
 	},
 }
-
-

@@ -11,7 +11,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Normal -- 
+-- Normal --
 -- Pane navigation | ctrl+h/j/k/l
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -59,12 +59,15 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
-keymap("n", "<C-p>", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
-keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
+keymap("n", "<leader>lg", "<cmd>Telescope live_grep<CR>", opts)
 
 -- Format
-keymap("n", "<leader>f", "<cmd>Format<CR>", opts)
+-- keymap("n", "<leader>f", "<cmd>Format<CR>", opts)
 
 -- Toggleterm
 keymap("n", "<C-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
-keymap("n", "<C-P>", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts)
+keymap("n", "<C-/>", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts)
+
+-- Zen Mode
+keymap("n", "<leader> z", "<cmd>ZenMode<CR>", opts)
