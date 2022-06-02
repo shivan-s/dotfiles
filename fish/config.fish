@@ -34,3 +34,8 @@ alias firefox="open -a firefox"
 alias vim="nvim"
 alias rvim="vim"
 alias gi="git add . && git commit -m 'init' && git push"
+
+# Sourcing functions
+function swapempty
+  rm "$HOME/.local/share/nvim/swap/*"
+end

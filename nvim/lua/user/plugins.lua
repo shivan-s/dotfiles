@@ -116,6 +116,9 @@ return packer.startup(function(use)
 	-- Startup
 	use("startup-nvim/startup.nvim")
 
+	-- Zk
+	use("mickael-menu/zk-nvim")
+
 	-- End of Custom Plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

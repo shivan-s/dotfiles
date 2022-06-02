@@ -1,6 +1,7 @@
--- ========
+-- ======================================
 -- Zen-Mode
--- ========
+-- https://github.com/folke/zen-mode.nvim
+-- ======================================
 
 local status_ok, zen_mode = pcall(require, "zen-mode")
 if not status_ok then
@@ -19,9 +20,11 @@ zen_mode.setup({
 		-- by default, no options are changed for the Zen window
 		-- uncomment any of the options below, or add other vim.wo options you want to apply
 		options = {
-			-- signcolumn = "no", -- disable signcolumn
-			-- number = false, -- disable number column
-			-- relativenumber = false, -- disable relative numbers
+			signcolumn = "no", -- disable signcolumn
+			number = false, -- disable number column
+			relativenumber = false, -- disable relative numbers
+			wrap = true, -- wrap
+			linebreak = true, -- wrap words
 			-- cursorline = false, -- disable cursorline
 			-- cursorcolumn = false, -- disable cursor column
 			-- foldcolumn = "0", -- disable fold column
