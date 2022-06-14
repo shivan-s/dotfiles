@@ -13,11 +13,18 @@ return {
 				resolveEagerly = false,
 				ignorePatterns = {},
 			},
-			diagnostic = {
+			diagnostics = {
 				enable = true,
 				didOpen = true,
 				didChange = true,
 				globals = { "vim" },
+			},
+			format = {
+				enable = true,
+				defaultConfig = {
+					indent_size = "4",
+					indent_style = "space",
+				},
 			},
 			hover = {
 				enable = true,

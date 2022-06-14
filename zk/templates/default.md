@@ -1,2 +1,2 @@
 # {{title}}
-## {{date}}
+## {{date now "%m-%d-%Y"}}

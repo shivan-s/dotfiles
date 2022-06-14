@@ -21,7 +21,19 @@ null_ls.setup({
 		-- Lua
 		formatting.stylua,
 		-- Markdown
+		formatting.markdownlint,
 		diagnostics.markdownlint,
 		diagnostics.proselint,
+		-- fish
+		diagnostics.fish,
+		-- docker/dockerfile
+		diagnostics.hadolint,
+		-- Rust
+		formatting.rustfmt,
 	},
+	on_attach = function(client)
+		if client.resolved_capabilities.document_formatting then
+			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+		end
+	end,
 })

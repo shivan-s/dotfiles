@@ -9,6 +9,8 @@ local servers = {
 	"jsonls",
 	"sumneko_lua",
 	"jedi_language_server",
+	"zk",
+	"rust_analyzer",
 }
 
 lsp_installer.setup({
