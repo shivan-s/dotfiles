@@ -15,23 +15,19 @@ null_ls.setup({
 		diagnostics.eslint,
 		formatting.prettier,
 		-- Python
-		diagnostics.flake8,
-		diagnostics.mypy,
 		diagnostics.pydocstyle,
 		formatting.black,
-		formatting.isort,
 		-- Django
 		diagnostics.djlint,
 		-- Lua
 		formatting.stylua,
 		-- Markdown
 		formatting.markdownlint,
-		-- diagnostics.markdownlint.with(
-		--     {
-		--       args = {"-t", "~line_length"}
-		--     }
-		--   ),
-		diagnostics.markdownlint,
+		diagnostics.markdownlint.with(
+		    {
+		      args = {"-t", "~line_length"},
+		    }
+		  ),
 		diagnostics.proselint,
 		-- Fish
 		diagnostics.fish,

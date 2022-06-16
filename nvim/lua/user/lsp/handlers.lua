@@ -102,7 +102,7 @@ M.on_attach = function(client, bufnr)
 		client.resolved_capabilities.document_formatting = false
 	elseif client.name == "rust_analyzer" then
 		client.resolved_capabilities.document_formatting = false
-	elseif client.name == "jedi_language_server" then
+	elseif client.name == "pyright" then
 		client.resolved_capabilities.document_formatting = false
 	elseif client.name == "gopls" then
 		client.resolved_capabilities.document_formatting = false

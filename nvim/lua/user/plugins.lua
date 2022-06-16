@@ -119,6 +119,10 @@ return packer.startup(function(use)
 	-- Zk
 	use("mickael-menu/zk-nvim")
 
+    -- Images
+    use("nvim-lua/popup.nvim")
+    use("nvim-telescope/telescope-media-files.nvim")
+
 	-- End of Custom Plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
