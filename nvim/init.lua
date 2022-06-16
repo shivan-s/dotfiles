@@ -19,4 +19,4 @@ require("user.treesitter")
 require("user.whichkey")
 require("user.startup")
 require("user.zen-mode")
-require"user.zk"
+require("user.zk")

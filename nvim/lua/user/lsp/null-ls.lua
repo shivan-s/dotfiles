@@ -9,6 +9,8 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
+        -- General
+        diagnostics.codespell,
 		-- TS/JS
 		diagnostics.eslint,
 		formatting.prettier,
@@ -18,22 +20,21 @@ null_ls.setup({
 		diagnostics.pydocstyle,
 		formatting.black,
 		formatting.isort,
+        -- Django
+        diagnostics.djlint,
 		-- Lua
 		formatting.stylua,
 		-- Markdown
 		formatting.markdownlint,
 		diagnostics.markdownlint,
 		diagnostics.proselint,
-		-- fish
+		-- Fish
 		diagnostics.fish,
-		-- docker/dockerfile
+		-- Docker
 		diagnostics.hadolint,
 		-- Rust
 		formatting.rustfmt,
+        -- Golang
+        formatting.gofmt,
 	},
-	on_attach = function(client)
-		if client.resolved_capabilities.document_formatting then
-			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-		end
-	end,
 })

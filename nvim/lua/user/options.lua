@@ -1,7 +1,6 @@
 -- =======
 -- Options
 -- =======
--- Inspiration: https://github.com/LunarVim/Neovim-from-scratch
 local options = {
 	hidden = true,
 	backup = false,

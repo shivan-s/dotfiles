@@ -24,6 +24,9 @@ set -gx DJANGO_DEVELOPMENT yes
 # Go set up
 alias go="grc go"
 
+# kubectl
+alias kubectl="minikube kubectl --"
+
 # set -gx TERM xterm-256color
 
 # Fish commands
