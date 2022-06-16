@@ -9,8 +9,8 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-        -- General
-        diagnostics.codespell,
+		-- General
+		diagnostics.codespell,
 		-- TS/JS
 		diagnostics.eslint,
 		formatting.prettier,
@@ -20,12 +20,17 @@ null_ls.setup({
 		diagnostics.pydocstyle,
 		formatting.black,
 		formatting.isort,
-        -- Django
-        diagnostics.djlint,
+		-- Django
+		diagnostics.djlint,
 		-- Lua
 		formatting.stylua,
 		-- Markdown
 		formatting.markdownlint,
+		-- diagnostics.markdownlint.with(
+		--     {
+		--       args = {"-t", "~line_length"}
+		--     }
+		--   ),
 		diagnostics.markdownlint,
 		diagnostics.proselint,
 		-- Fish
@@ -34,7 +39,7 @@ null_ls.setup({
 		diagnostics.hadolint,
 		-- Rust
 		formatting.rustfmt,
-        -- Golang
-        formatting.gofmt,
+		-- Golang
+		formatting.gofmt,
 	},
 })

@@ -8,9 +8,10 @@ local lspconfig = require("lspconfig")
 local servers = {
 	"jsonls",
 	"sumneko_lua",
-	"jedi_language_server",
+    "pyright",
 	"zk",
 	"rust_analyzer",
+	"gopls",
 }
 
 lsp_installer.setup({
