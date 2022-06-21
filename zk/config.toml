@@ -36,11 +36,13 @@ author = "Shivan"
 
 
 # GROUP OVERRIDES
-[dir.journal]
-paths = ["journal/weekly", "journal/daily"]
+[group.daily]
+paths = ["journal"]
 
-[dir.journal.note]
-filename = "{{date now}}"
+[group.daily.note]
+filename = "{{date now '%Y-%m-%d'}}"
+extension = "md"
+template = "daily.md"
 
 
 # MARKDOWN SETTINGS
@@ -71,13 +73,23 @@ recents = "--sort created- --created-after 'last two weeks'"
 [alias]
 
 # Edit the last modified note.
-edlast = "zk edit --limit 1 --sort modified- $@"
+edlast = "zk edit --limit 1 --sort modified- $argv"
 
 # Edit the notes selected interactively among the notes created the last two weeks.
 recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"
 
 # Show a random note.
 lucky = "zk list --quiet --format full --sort random --limit 1"
+
+ls = "zk list --interactive"
+
+config = 'nvim "$HOME/.dotfiles/zk/config.toml"'
+
+daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal"'
+
+ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas"'
+
+ed =  'zk edit --interactive'
 
 # LSP (EDITOR INTEGRATION)
 [lsp]

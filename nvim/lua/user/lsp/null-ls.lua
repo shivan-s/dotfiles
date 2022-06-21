@@ -37,5 +37,6 @@ null_ls.setup({
 		formatting.rustfmt,
 		-- Golang
 		formatting.gofmt,
+      diagnostics.golangci_lint,
 	},
 })

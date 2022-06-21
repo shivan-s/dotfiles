@@ -11,7 +11,6 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /$HOME/.local/bin
 fish_add_path /$HOME/.cargo/bin
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 eval /Users/shivan/miniconda3/bin/conda "shell.fish" "hook" $argv | source
@@ -22,7 +21,9 @@ set -gx PYTHONDONTWRITEBYTECODE 1
 set -gx DJANGO_DEVELOPMENT yes
 
 # Go set up
+set -x GOPATH $HOME/go
 alias go="grc go"
+fish_add_path /$GOPATH/bin
 
 # kubectl
 alias kubectl="minikube kubectl --"
@@ -42,3 +43,6 @@ alias gi="git add . && git commit -m 'init' && git push"
 function swapempty
   rm "$HOME/.local/share/nvim/swap/*"
 end
+
+# zk
+set -gx ZK_NOTEBOOK_DIR $HOME/Notes/
