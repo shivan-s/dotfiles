@@ -63,7 +63,7 @@ keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<CR>"
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<CR>", opts)
 
 -- Format
--- keymap("n", "<leader>f", "<cmd>Format<CR>", opts)
+keymap("n", "<leader><leader>f", "<cmd>Format<CR>", opts)
 
 -- Toggleterm
 -- keymap("n", "<C-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)

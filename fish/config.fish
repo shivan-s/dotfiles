@@ -1,4 +1,7 @@
-set -gx fish_greeting 'Welcome!'
+function fish_greeting
+    echo Hello $USER,
+    echo The time is (set_color green; date +%T; set_color normal)
+end
 
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 status --is-interactive; and pyenv virtualenv-init - | source
@@ -21,23 +24,28 @@ set -gx PYTHONDONTWRITEBYTECODE 1
 set -gx DJANGO_DEVELOPMENT yes
 
 # Go set up
-set -x GOPATH $HOME/go
+set -x GOPATH $HOME/Projects/go/
 alias go="grc go"
+alias godev="cd $HOME/Projects/go/src/github.com/shivan-s/"
 fish_add_path /$GOPATH/bin
 
 # kubectl
 alias kubectl="minikube kubectl --"
 
+# glow
+set -gx EDITOR nvim
+
 # set -gx TERM xterm-256color
 
 # Fish commands
-alias la="ls -al"
+alias la="ls -alh"
 alias rm="rm -i"
 alias cp="cp -i"
 alias firefox="open -a firefox"
 alias vim="nvim"
 alias rvim="vim"
 alias gi="git add . && git commit -m 'init' && git push"
+alias fishconfig="$EDITOR $HOME/.dotfiles/fish/config.fish"
 
 # Sourcing functions
 function swapempty
@@ -46,3 +54,4 @@ end
 
 # zk
 set -gx ZK_NOTEBOOK_DIR $HOME/Notes/
+

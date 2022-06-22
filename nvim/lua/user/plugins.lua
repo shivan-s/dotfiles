@@ -119,9 +119,27 @@ return packer.startup(function(use)
 	-- Zk
 	use("mickael-menu/zk-nvim")
 
-    -- Images
-    use("nvim-lua/popup.nvim")
-    use("nvim-telescope/telescope-media-files.nvim")
+	-- Images
+	use("nvim-lua/popup.nvim")
+	use("nvim-telescope/telescope-media-files.nvim")
+
+	-- MarkdownPreview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+
+	-- Debugging
+	use("mfussenegger/nvim-dap")
+	use("leoluz/nvim-dap-go")
+	use("mfussenegger/nvim-python")
+	use("rcarriga/nvim-dap-ui")
+	use("theHamsta/nvim-dap-virtual-text")
+	use("nvim-telescope/telescope-dap.nvim")
 
 	-- End of Custom Plugins
 	if PACKER_BOOTSTRAP then

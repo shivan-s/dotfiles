@@ -87,7 +87,7 @@ config = 'nvim "$HOME/.dotfiles/zk/config.toml"'
 
 daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal"'
 
-ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas"'
+ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --title $argv'
 
 ed =  'zk edit --interactive'
 

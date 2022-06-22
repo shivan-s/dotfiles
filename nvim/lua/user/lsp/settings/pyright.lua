@@ -1,6 +1,5 @@
 return {
 	settings = {
-    python = 
-      { venvPath = "~/.local/share/virtualenvs"}
-  }
+		python = { venvPath = "~/.virtualenvs" },
+	},
 }
