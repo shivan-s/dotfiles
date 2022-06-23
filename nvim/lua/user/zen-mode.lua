@@ -21,7 +21,7 @@ zen_mode.setup({
 		-- uncomment any of the options below, or add other vim.wo options you want to apply
 		options = {
 			signcolumn = "no", -- disable signcolumn
-			number = true, -- disable number column
+			number = false, -- disable number column
 			relativenumber = false, -- disable relative numbers
 			wrap = true, -- wrap
 			linebreak = true, -- wrap words

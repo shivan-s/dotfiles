@@ -1,2 +1,5 @@
-# {{title}}
-## {{date now "%m-%d-%Y"}}
+---
+title: {{title}}
+date: {{date now "long"}}
+tags: []
+---

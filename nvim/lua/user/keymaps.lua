@@ -74,3 +74,6 @@ keymap("n", "<leader>zm", "<cmd>ZenMode<CR>", opts)
 
 -- Neogen
 keymap("n", "<leader>n", "<cmd>Neogen<CR>", opts)
+
+-- MarkDown Preview
+keymap("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", opts)

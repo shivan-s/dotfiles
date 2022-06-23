@@ -9,7 +9,7 @@ language = "en"
 default-title = "Untitled"
 
 # Template used to generate a note's filename, without extension.
-filename = "{{id}}-{{slug title}}"
+filename = "{{id}}"
 
 # The file extension used for the notes.
 extension = "md"
@@ -24,7 +24,7 @@ template = "default.md"
 id-charset = "alphanum"
 
 # Length of the generated IDs.
-id-length = 4
+id-length = 8
 
 # Letter case for the random IDs.
 id-case = "lower"
@@ -48,7 +48,7 @@ template = "daily.md"
 # MARKDOWN SETTINGS
 [format.markdown]
 # Enable support for #hashtags
-hashtags = true
+hashtags = false
 # Enable support for :colon:separated:tags:
 colon-tags = true
 
@@ -81,7 +81,9 @@ recent = "zk edit --sort created- --created-after 'last two weeks' --interactive
 # Show a random note.
 lucky = "zk list --quiet --format full --sort random --limit 1"
 
-ls = "zk list --interactive"
+ls = "zk edit --interactive"
+
+t = "zk edit --interactive --tag $argv"
 
 config = 'nvim "$HOME/.dotfiles/zk/config.toml"'
 
@@ -91,6 +93,9 @@ ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --title $argv'
 
 ed =  'zk edit --interactive'
 
+journal = "zk edit --sort created- journal --interactive"
+
+update = "cd $ZK_NOTEBOOK_DIR; git add -A; git commit -am 'updating'; git push; cd -"
 # LSP (EDITOR INTEGRATION)
 [lsp]
 

@@ -25,9 +25,9 @@ set -gx DJANGO_DEVELOPMENT yes
 
 # Go set up
 set -x GOPATH $HOME/Projects/go/
+fish_add_path /$GOPATH/bin
 alias go="grc go"
 alias godev="cd $HOME/Projects/go/src/github.com/shivan-s/"
-fish_add_path /$GOPATH/bin
 
 # kubectl
 alias kubectl="minikube kubectl --"
@@ -43,9 +43,21 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias firefox="open -a firefox"
 alias vim="nvim"
-alias rvim="vim"
 alias gi="git add . && git commit -m 'init' && git push"
 alias fishconfig="$EDITOR $HOME/.dotfiles/fish/config.fish"
+
+# sync dotfiles
+function dotfileupdate
+  set -f commit_message updating...
+  if count $argv > /dev/null
+    set -f commit_message $argv
+  end
+  cd $HOME/.dotfiles/
+  git add -A
+  git commit -m "$commit_message"
+  git push
+  cd -
+end
 
 # Sourcing functions
 function swapempty

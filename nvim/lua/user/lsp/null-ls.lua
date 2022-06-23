@@ -25,12 +25,13 @@ null_ls.setup({
 		formatting.markdownlint,
 		diagnostics.markdownlint.with(
 		    {
-		      args = {"-t", "~line_length"},
+		      args = {"--rules ~MD013"},
 		    }
 		  ),
 		diagnostics.proselint,
 		-- Fish
 		diagnostics.fish,
+        formatting.fish_indent, 
 		-- Docker
 		diagnostics.hadolint,
 		-- Rust
