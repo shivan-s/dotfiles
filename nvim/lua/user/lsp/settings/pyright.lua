@@ -1,5 +1,12 @@
 return {
 	settings = {
-		python = { venvPath = "~/.virtualenvs" },
+		python = {
+			analysis = {
+				autoSearchPaths = true,
+				diagnosticMode = "workspace",
+				useLibraryCodeForTypes = false,
+				typeCheckingMode = "off",
+			},
+		},
 	},
 }

@@ -77,3 +77,15 @@ keymap("n", "<leader>n", "<cmd>Neogen<CR>", opts)
 
 -- MarkDown Preview
 keymap("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", opts)
+
+-- Daps
+local gkeymap = vim.keymap.set
+gkeymap("n", "<F5>", ":lua require'dap'.continue()<CR>")
+gkeymap("n", "<F6>", ":lua require'dap'.step_over()<CR>")
+gkeymap("n", "<F7>", ":lua require'dap'.step_into()<CR>")
+gkeymap("n", "<F8>", ":lua require'dap'.step_out()<CR>")
+gkeymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+gkeymap("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+gkeymap("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
+gkeymap("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
+gkeymap("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>")

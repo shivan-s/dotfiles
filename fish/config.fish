@@ -21,7 +21,8 @@ eval /Users/shivan/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 
 # Python set up
 set -gx PYTHONDONTWRITEBYTECODE 1
-set -gx DJANGO_DEVELOPMENT yes
+set -gx DJANGO_DEVELOPMENT 1
+set -gx PIPENV_VENV_IN_PROJECT 1
 
 # Go set up
 set -x GOPATH $HOME/Projects/go/

@@ -12,6 +12,7 @@ local servers = {
 	"zk",
 	"rust_analyzer",
 	"gopls",
+  "eslint",
 }
 
 lsp_installer.setup({

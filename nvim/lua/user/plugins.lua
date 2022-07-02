@@ -136,10 +136,13 @@ return packer.startup(function(use)
 	-- Debugging
 	use("mfussenegger/nvim-dap")
 	use("leoluz/nvim-dap-go")
-	use("mfussenegger/nvim-python")
+	use("mfussenegger/nvim-dap-python")
 	use("rcarriga/nvim-dap-ui")
 	use("theHamsta/nvim-dap-virtual-text")
 	use("nvim-telescope/telescope-dap.nvim")
+
+  -- Markdown
+  use("ixru/nvim-markdown")
 
 	-- End of Custom Plugins
 	if PACKER_BOOTSTRAP then

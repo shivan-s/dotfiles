@@ -166,6 +166,11 @@ _G.packer_plugins = {
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
     url = "https://github.com/leoluz/nvim-dap-go"
   },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
+    url = "https://github.com/mfussenegger/nvim-dap-python"
+  },
   ["nvim-dap-ui"] = {
     loaded = true,
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
@@ -185,6 +190,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-markdown"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/nvim-markdown",
+    url = "https://github.com/ixru/nvim-markdown"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
