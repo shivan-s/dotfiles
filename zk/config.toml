@@ -1,4 +1,4 @@
-# NOTE SETTINGS
+# SETTINGS
 [note]
 
 # Language used when writing notes.
@@ -44,11 +44,17 @@ filename = "{{date now '%Y-%m-%d'}}"
 extension = "md"
 template = "daily.md"
 
+[group.youtube]
+
+[group.youtube.note]
+extension ="md"
+template = "youtube.md"
+
 
 # MARKDOWN SETTINGS
 [format.markdown]
 # Enable support for #hashtags
-hashtags = false
+hashtags = true
 # Enable support for :colon:separated:tags:
 colon-tags = true
 
@@ -81,21 +87,34 @@ recent = "zk edit --sort created- --created-after 'last two weeks' --interactive
 # Show a random note.
 lucky = "zk list --quiet --format full --sort random --limit 1"
 
+# list notes for editing
 ls = "zk edit --interactive"
 
+# sear notes by tags
 t = "zk edit --interactive --tag $argv"
 
 config = 'nvim "$HOME/.dotfiles/zk/config.toml"'
 
+# new journal entry
 daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal"'
 
+# new note
 ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --title $argv'
 
-ed =  'zk edit --interactive'
+# new youtube note
+ney = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --group youtube --title $argv'
 
 journal = "zk edit --sort created- journal --interactive"
 
+# update zk notes
 update = "cd $ZK_NOTEBOOK_DIR; git add -A; git commit -am 'updating'; git push; cd -"
+
+# remove a files
+rm = "zk list --interactive --quiet --format path --delimiter0 $argv | xargs -0 rm -vf --"
+
+# open last zk in slides
+slides = "zk list --interactive --quiet --format path --delimiter0 $argv | xargs -0 slides"
+
 # LSP (EDITOR INTEGRATION)
 [lsp]
 
