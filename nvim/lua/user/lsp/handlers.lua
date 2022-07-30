@@ -19,7 +19,7 @@ M.setup = function()
 
 	local config = {
 		-- disable virtual text
-		virtual_text = false,
+		virtual_text = true,
 		-- show signs
 		signs = {
 			active = signs,
@@ -80,21 +80,10 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	vim.cmd([[ command! Format :lua vim.lsp.buf.formatting() ]])
+	vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]])
 end
-
-local lsp_formatting = function(bufnr)
-	vim.lsp.buf.formatting({
-		filter = function(client)
-			return client.name == "null-ls"
-		end,
-		bufnr = bufnr,
-	})
-end
-
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 M.on_attach = function(client, bufnr)
-	-- vim.notify(client.name .. " starting...")
 	-- TODO: refactor this into a method that checks if string in list
 	if client.name == "tsserver" then
 		client.resolved_capabilities.document_formatting = false
@@ -111,16 +100,6 @@ M.on_attach = function(client, bufnr)
 	end
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)
-	if client.supports_method("textDocument/formatting") then
-		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = augroup,
-			buffer = bufnr,
-			callback = function()
-				lsp_formatting(bufnr)
-			end,
-		})
-	end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

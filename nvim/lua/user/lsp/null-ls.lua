@@ -17,27 +17,31 @@ null_ls.setup({
 		-- Python
 		diagnostics.pydocstyle,
 		formatting.black,
+		diagnostics.mypy,
+		diagnostics.flake8,
 		-- Django
 		diagnostics.djlint,
 		-- Lua
 		formatting.stylua,
 		-- Markdown
 		formatting.markdownlint,
-		diagnostics.markdownlint.with(
-		    {
-		      args = {"--rules ~MD013"},
-		    }
-		  ),
+		diagnostics.markdownlint,
 		diagnostics.proselint,
 		-- Fish
 		diagnostics.fish,
-        formatting.fish_indent, 
+		formatting.fish_indent,
 		-- Docker
 		diagnostics.hadolint,
 		-- Rust
 		formatting.rustfmt,
 		-- Golang
 		formatting.gofmt,
-      diagnostics.golangci_lint,
+		diagnostics.golangci_lint,
+		-- rst
+		diagnostics.rstcheck,
+		-- actionlint
+		diagnostics.actionlint,
+		-- yamllint
+		diagnostics.yamllint,
 	},
 })

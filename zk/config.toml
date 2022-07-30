@@ -104,7 +104,9 @@ ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --title $argv'
 # new youtube note
 ney = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --group youtube --title $argv'
 
-journal = "zk edit --sort created- journal --interactive"
+journal = "zk edit --sort created- $ZK_NOTEBOOK_DIR/journal --interactive"
+
+ideas = "zk edit --sort created- $ZK_NOTEBOOK_DIR/ideas --interactive"
 
 # update zk notes
 update = "cd $ZK_NOTEBOOK_DIR; git add -A; git commit -am 'updating'; git push; cd -"

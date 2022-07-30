@@ -23,5 +23,4 @@ tags: [youtube]
 
 ### Rest (Bullet Points)
 
-1.
-
+-

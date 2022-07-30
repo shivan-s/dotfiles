@@ -6,6 +6,7 @@ return {
 				diagnosticMode = "workspace",
 				useLibraryCodeForTypes = false,
 				typeCheckingMode = "off",
+				stubPath = "",
 			},
 		},
 	},

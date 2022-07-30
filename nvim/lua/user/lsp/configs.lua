@@ -6,13 +6,20 @@ end
 local lspconfig = require("lspconfig")
 
 local servers = {
-	"jsonls",
-	"sumneko_lua",
-    "pyright",
-	"zk",
-	"rust_analyzer",
+	"ansiblels",
+	"cucumber_language_server",
+	"esbonio",
+	"eslint",
 	"gopls",
-  "eslint",
+	"jsonls",
+	"ltex",
+	"pyright",
+	"rust_analyzer",
+	"sumneko_lua",
+	"tsserver",
+	"yamlls",
+	"zk",
+	-- "pylsp",
 }
 
 lsp_installer.setup({
