@@ -1,4 +1,4 @@
-{{date now "long" }}
+# {{date now "long" }}
 ---
 ## Goal of the Day
 
