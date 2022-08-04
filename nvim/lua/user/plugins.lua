@@ -144,6 +144,9 @@ return packer.startup(function(use)
 	-- Markdown
 	use("ixru/nvim-markdown")
 
+	-- Tagbar
+	use("preservim/tagbar")
+
 	-- End of Custom Plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

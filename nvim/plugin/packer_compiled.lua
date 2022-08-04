@@ -251,6 +251,11 @@ _G.packer_plugins = {
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/startup.nvim",
     url = "https://github.com/startup-nvim/startup.nvim"
   },
+  tagbar = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/preservim/tagbar"
+  },
   ["telescope-dap.nvim"] = {
     loaded = true,
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
