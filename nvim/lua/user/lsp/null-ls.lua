@@ -16,11 +16,18 @@ null_ls.setup({
 		formatting.prettier,
 		-- Python
 		diagnostics.pydocstyle,
-		formatting.black,
+		formatting.black.with({
+			command = "black",
+			args = { "--quiet", "--fast", "-" },
+		}),
 		diagnostics.mypy,
 		diagnostics.flake8,
 		-- Django
 		diagnostics.djlint,
+		formatting.djlint.with({
+			command = "djlint",
+			args = { "--reformat", "-" },
+		}),
 		-- Lua
 		formatting.stylua,
 		-- Markdown
@@ -45,3 +52,9 @@ null_ls.setup({
 		diagnostics.yamllint,
 	},
 })
+
+-- Django ("htmldjango")
+if vim.fn.executable("djlint") == 1 then
+	vim.cmd([[ command! Format :lua vim.lsp.buf.formatting() ]])
+	vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]])
+end
