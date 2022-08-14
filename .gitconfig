@@ -3,7 +3,7 @@
 [pull]
 	rebase = false
 [user]
-	name = Shivan Sivakumarnan
+	name = Shivan Sivakumaran
 	email = 51132467+ShivanS93@users.noreply.github.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f

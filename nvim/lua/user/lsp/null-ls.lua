@@ -32,7 +32,10 @@ null_ls.setup({
 		formatting.stylua,
 		-- Markdown
 		formatting.markdownlint,
-		diagnostics.markdownlint,
+		diagnostics.markdownlint.with({
+			command = "markdownlint",
+			args = { "--stdin", "--disable MD013" },
+		}),
 		diagnostics.proselint,
 		-- Fish
 		diagnostics.fish,
@@ -50,6 +53,11 @@ null_ls.setup({
 		diagnostics.actionlint,
 		-- yamllint
 		diagnostics.yamllint,
+		-- toml
+		formatting.taplo.with({
+			command = "taplo",
+			args = { "format", "-" },
+		}),
 	},
 })
 

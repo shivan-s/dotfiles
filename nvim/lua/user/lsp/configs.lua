@@ -19,6 +19,7 @@ local servers = {
 	"tsserver",
 	"yamlls",
 	"zk",
+	"taplo",
 	-- "pylsp",
 }
 

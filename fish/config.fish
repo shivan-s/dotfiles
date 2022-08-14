@@ -68,3 +68,6 @@ end
 # zk
 set -gx ZK_NOTEBOOK_DIR $HOME/Notes/
 
+# pipenv completions
+eval (env _PIPENV_COMPLETE=fish_source pipenv)
+
