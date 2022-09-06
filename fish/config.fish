@@ -16,7 +16,7 @@ fish_add_path /$HOME/.cargo/bin
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /Users/shivan/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+eval /Users/shivan/miniconda3/bin/conda "shell.fish" hook $argv | source
 # <<< conda initialize <<<
 
 # Python set up
@@ -49,20 +49,20 @@ alias fishconfig="$EDITOR $HOME/.dotfiles/fish/config.fish"
 
 # sync dotfiles
 function dotfileupdate
-  set -f commit_message updating...
-  if count $argv > /dev/null
-    set -f commit_message $argv
-  end
-  cd $HOME/.dotfiles/
-  git add -A
-  git commit -m "$commit_message"
-  git push
-  cd -
+    set -f commit_message updating...
+    if count $argv >/dev/null
+        set -f commit_message $argv
+    end
+    cd $HOME/.dotfiles/
+    git add -A
+    git commit -m "$commit_message"
+    git push
+    cd -
 end
 
 # Sourcing functions
 function swapempty
-  rm "$HOME/.local/share/nvim/swap/*"
+    rm "$HOME/.local/share/nvim/swap/*"
 end
 
 # zk
@@ -71,3 +71,5 @@ set -gx ZK_NOTEBOOK_DIR $HOME/Notes/
 # pipenv completions
 eval (env _PIPENV_COMPLETE=fish_source pipenv)
 
+# FZF
+set -gx FZF_DEFAULT_OPTS "--layout=reverse --preview=bat"
