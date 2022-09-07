@@ -81,6 +81,9 @@ keymap("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", opts)
 -- Tagbar
 keymap("n", "<leader>t", ":TagbarToggle<CR>", opts)
 
+--Re Source
+keymap("n", "<leader>so", ":source $MYINIT<CR>", opts)
+
 -- Daps
 local gkeymap = vim.keymap.set
 gkeymap("n", "<F5>", ":lua require'dap'.continue()<CR>")
