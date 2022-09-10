@@ -1,6 +1,7 @@
 require("user.autopairs")
 require("user.bufferline")
 require("user.cmp")
+require("user.color-converter")
 require("user.colorscheme")
 require("user.comment")
 require("user.customcommands")

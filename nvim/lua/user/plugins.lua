@@ -147,6 +147,9 @@ return packer.startup(function(use)
 	-- Tagbar
 	use("preservim/tagbar")
 
+	-- CSS Colors
+	use("NTBBloodbath/color-converter.nvim")
+
 	-- End of Custom Plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
