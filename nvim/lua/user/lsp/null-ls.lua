@@ -12,10 +12,11 @@ null_ls.setup({
 		-- General
 		diagnostics.codespell,
 		-- TS/JS
-		diagnostics.eslint,
+		diagnostics.eslint_d,
 		formatting.prettier,
 		-- Python
 		diagnostics.pydocstyle,
+		formatting.isort,
 		formatting.black.with({
 			command = "black",
 			args = { "--quiet", "--fast", "-" },

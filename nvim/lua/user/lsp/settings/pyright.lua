@@ -2,7 +2,7 @@ return {
 	settings = {
 		python = {
 			analysis = {
-				autoSearchPaths = true,
+				autoSearchPaths = false,
 				diagnosticMode = "workspace",
 				useLibraryCodeForTypes = false,
 				typeCheckingMode = "off",

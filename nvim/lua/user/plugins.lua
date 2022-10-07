@@ -150,6 +150,26 @@ return packer.startup(function(use)
 	-- CSS Colors
 	use("NTBBloodbath/color-converter.nvim")
 
+	-- nvim-ts-autotag
+	use("windwp/nvim-ts-autotag")
+
+	-- git-conflict
+	use({
+		"akinsho/git-conflict.nvim",
+		tag = "*",
+		config = function()
+			require("git-conflict").setup({})
+		end,
+	})
+	-- neovim surround
+	use({
+		"kylechui/nvim-surround",
+		tag = "*",
+		config = function()
+			require("nvim-surround").setup({})
+		end,
+	})
+
 	-- End of Custom Plugins
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

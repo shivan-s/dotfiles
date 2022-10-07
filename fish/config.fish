@@ -23,6 +23,7 @@ eval /Users/shivan/miniconda3/bin/conda "shell.fish" hook $argv | source
 set -gx PYTHONDONTWRITEBYTECODE 1
 set -gx DJANGO_DEVELOPMENT 1
 set -gx PIPENV_VENV_IN_PROJECT 1
+set -gx PYRIGHT_PYTHON_FORCE_VERSION latest
 
 # Go set up
 set -x GOPATH $HOME/Projects/go/
@@ -73,3 +74,7 @@ eval (env _PIPENV_COMPLETE=fish_source pipenv)
 
 # FZF
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --preview=bat"
+
+# starship
+# TODO: lookj into this
+# starship init fish | source
