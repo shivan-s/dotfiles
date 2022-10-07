@@ -13,14 +13,13 @@ local servers = {
 	"gopls",
 	"jsonls",
 	"ltex",
-	"pyright",
+	"jedi_language_server",
 	"rust_analyzer",
 	"sumneko_lua",
 	"tsserver",
 	"yamlls",
 	"zk",
 	"taplo",
-	-- "pylsp",
 }
 
 lsp_installer.setup({
