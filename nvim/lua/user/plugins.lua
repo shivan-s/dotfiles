@@ -91,9 +91,6 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
 
-	-- Color scheme
-	use("junegunn/seoul256.vim")
-
 	-- Lightline
 	use("nvim-lualine/lualine.nvim")
 
@@ -169,6 +166,8 @@ return packer.startup(function(use)
 			require("nvim-surround").setup({})
 		end,
 	})
+	-- catppuccin theme
+	use("catppuccin/nvim")
 
 	-- End of Custom Plugins
 	if PACKER_BOOTSTRAP then
