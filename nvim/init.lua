@@ -1,5 +1,4 @@
-require("user.autopairs")
-require("user.bufferline")
+require("user.autopairs") require("user.bufferline")
 require("user.cmp")
 require("user.color-converter")
 require("user.comment")

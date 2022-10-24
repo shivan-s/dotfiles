@@ -65,5 +65,5 @@ null_ls.setup({
 -- Django ("htmldjango")
 if vim.fn.executable("djlint") == 1 then
 	vim.cmd([[ command! Format :lua vim.lsp.buf.formatting() ]])
-	vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]])
+	vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 end
