@@ -13,9 +13,10 @@ null_ls.setup({
 		diagnostics.codespell,
 		-- NGINX
 		formatting.nginx_beautifier,
-		-- TS/JS
+		-- TS/JS/CSS
 		diagnostics.eslint_d,
 		formatting.prettier,
+		diagnostics.stylelint,
 		-- Python
 		diagnostics.pydocstyle,
 		formatting.isort,
