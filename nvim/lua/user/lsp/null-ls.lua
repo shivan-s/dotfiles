@@ -17,6 +17,7 @@ null_ls.setup({
 		diagnostics.eslint_d,
 		formatting.prettier,
 		diagnostics.stylelint,
+		formatting.stylelint,
 		-- Python
 		diagnostics.pydocstyle,
 		formatting.isort,
