@@ -20,7 +20,8 @@ local servers = {
 	"yamlls",
 	"zk",
 	"taplo",
-	"tailwindcss",
+	"emmet_ls",
+	"dockerls",
 }
 
 lsp_installer.setup({
