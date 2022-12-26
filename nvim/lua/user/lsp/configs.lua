@@ -22,6 +22,7 @@ local servers = {
 	"taplo",
 	"emmet_ls",
 	"dockerls",
+	"prismals",
 }
 
 lsp_installer.setup({

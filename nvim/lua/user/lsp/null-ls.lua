@@ -66,6 +66,12 @@ null_ls.setup({
 			command = "taplo",
 			args = { "format", "-" },
 		}),
+		-- Prisma
+		formatting.PrismaFmt.with({
+			"format",
+			"-i",
+			"$FILENAME",
+		}),
 	},
 })
 
