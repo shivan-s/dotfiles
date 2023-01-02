@@ -23,6 +23,7 @@ local servers = {
 	"emmet_ls",
 	"dockerls",
 	"prismals",
+	"tailwindcss",
 }
 
 lsp_installer.setup({
