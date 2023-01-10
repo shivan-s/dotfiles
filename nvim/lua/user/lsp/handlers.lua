@@ -104,6 +104,8 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "prismals" then
 		client.server_capabilities.document_formatting = false
+	elseif client.name == "svelte" then
+		client.server_capabilities.document_formatting = false
 	end
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)

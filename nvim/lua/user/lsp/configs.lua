@@ -24,6 +24,7 @@ local servers = {
 	"dockerls",
 	"prismals",
 	"tailwindcss",
+	"svelte",
 }
 
 lsp_installer.setup({
