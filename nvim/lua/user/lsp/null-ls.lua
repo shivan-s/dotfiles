@@ -14,7 +14,7 @@ null_ls.setup({
 		-- NGINX
 		formatting.nginx_beautifier,
 		-- TS/JS/CSS
-		diagnostics.eslint_d,
+		diagnostics.eslint,
 		formatting.prettier,
 		diagnostics.stylelint,
 		formatting.stylelint,
