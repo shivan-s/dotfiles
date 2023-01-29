@@ -14,7 +14,6 @@ configs.setup({
 		"phpdoc",
 		"swift",
 		"org",
-		"markdown",
 		"hack",
 		"haskell",
 		"fortran",

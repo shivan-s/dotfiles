@@ -60,14 +60,14 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
+keymap("n", "<C-p>", "<cmd>lua require'telescope.builtin'.git_files()<CR>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<CR>", opts)
+
+-- Undotree
+keymap("n", "<leader>u", "<cmd>:UndotreeToggle<CR>", opts)
 
 -- Format
 keymap("n", "<leader><leader>f", "<cmd>Format<CR>", opts)
-
--- Toggleterm
--- keymap("n", "<C-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
--- keymap("n", "<C-p>", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts)
 
 -- Zen Mode
 keymap("n", "<leader>zm", "<cmd>ZenMode<CR>", opts)
