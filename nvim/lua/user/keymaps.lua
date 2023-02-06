@@ -12,6 +12,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Normal --
+-- Vertical navigation
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
 -- Pane navigation | ctrl+h/j/k/l
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -83,6 +86,9 @@ keymap("n", "<leader>t", ":TagbarToggle<CR>", opts)
 
 --Re Source
 keymap("n", "<leader>so", ":source $MYINIT<CR>", opts)
+
+-- Exit from buffer
+keymap("n", "<leader>bd", ":bd", opts)
 
 -- Daps
 local gkeymap = vim.keymap.set

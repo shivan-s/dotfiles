@@ -173,6 +173,9 @@ return packer.startup(function(use)
   -- catppuccin theme
   use("catppuccin/nvim")
 
+  -- vim be good
+  use("ThePrimeagen/vim-be-good")
+
   -- End of Custom Plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
