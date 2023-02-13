@@ -84,8 +84,7 @@ nvim_tree.setup({
 		timeout = 500,
 	},
 	view = {
-		width = 30,
-		height = 30,
+		width = 40,
 		hide_root_folder = false,
 		side = "left",
 		mappings = {
@@ -111,14 +110,4 @@ nvim_tree.setup({
 			},
 		},
 	},
-
-	--  unknown options as of 22.05
-	--
-	--  update_to_buf_dir = {
-	--    enable = true,
-	--    auto_open = true,
-	--  },
-	--  auto_resize = true,
-	--  git_hl = 1,
-	--  root_folder_modifier = ":t",
 })
