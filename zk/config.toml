@@ -40,14 +40,14 @@ author = "Shivan"
 paths = ["journal"]
 
 [group.daily.note]
-filename = "{{date now '%Y-%m-%d'}}"
+filename = "{{format-date now '%Y-%m-%d'}}"
 extension = "md"
 template = "daily.md"
 
 [group.youtube]
 
 [group.youtube.note]
-extension ="md"
+extension = "md"
 template = "youtube.md"
 
 

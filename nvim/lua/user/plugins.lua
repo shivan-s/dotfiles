@@ -176,6 +176,9 @@ return packer.startup(function(use)
   -- vim be good
   use("ThePrimeagen/vim-be-good")
 
+  -- Carbon Now
+  use("ellisonleao/carbon-now.nvim")
+
   -- End of Custom Plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()

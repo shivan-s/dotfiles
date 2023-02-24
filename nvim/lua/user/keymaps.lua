@@ -90,6 +90,9 @@ keymap("n", "<leader>so", ":source $MYINIT<CR>", opts)
 -- Exit from buffer
 keymap("n", "<leader>bd", ":bd", opts)
 
+-- Carbon
+keymap("v", "<leader>cn", ":CarbonNow<CR>", { silent = true })
+
 -- Daps
 local gkeymap = vim.keymap.set
 gkeymap("n", "<F5>", ":lua require'dap'.continue()<CR>")
