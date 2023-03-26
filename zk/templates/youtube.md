@@ -1,13 +1,15 @@
 ---
-title: {{title}}
-date: {{date now "long"}}
+title: { { title } }
+date: { { format-date now "long" } }
 tags: [youtube]
 ---
+
 ## Titles
 
 1.
 
 ---
+
 ## Hero's Journey
 
 ### Character
@@ -17,6 +19,7 @@ tags: [youtube]
 ### How are they transformed by this experience?
 
 ---
+
 ## Script
 
 ### Hook

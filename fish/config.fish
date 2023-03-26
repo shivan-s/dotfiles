@@ -78,3 +78,10 @@ set -gx FZF_DEFAULT_OPTS "--layout=reverse --preview=bat"
 # starship
 # TODO: lookj into this
 # starship init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/Users/shivan/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

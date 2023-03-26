@@ -86,7 +86,7 @@ end
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.document_formatting = false
-	elseif client.name == "sumneko_lua" then
+	elseif client.name == "lua_ls" then
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "rust_analyzer" then
 		client.server_capabilities.document_formatting = false

@@ -1,4 +1,4 @@
-# {{format-date now "long" }}
+# {{"format-date now 'long'"}}
 
 ---
 
