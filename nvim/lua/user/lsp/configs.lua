@@ -31,6 +31,7 @@ local servers = {
 	"prismals",
 	"tailwindcss",
 	"svelte",
+	"sqlls",
 }
 
 lsp_installer.setup({
