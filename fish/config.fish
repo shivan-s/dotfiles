@@ -80,8 +80,16 @@ set -gx FZF_DEFAULT_OPTS "--layout=reverse --preview=bat"
 # starship init fish | source
 
 # pnpm
-set -gx PNPM_HOME "/Users/shivan/Library/pnpm"
+set -gx PNPM_HOME $HOME/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# Haskell
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+fish_add_path $HOME/.cabal/bin
+fish_add_path $HOME/.ghcup/bin
+
+# Racket
+fish_add_path /Applications/Racket/bin
