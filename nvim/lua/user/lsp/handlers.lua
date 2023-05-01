@@ -83,11 +83,10 @@ local function lsp_keymaps(bufnr)
 	-- [[ vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]) ]]
 end
 
-
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.document_formatting = false
-    elseif client.name == "deno" then
+	elseif client.name == "deno" then
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "lua_ls" then
 		client.server_capabilities.document_formatting = false
@@ -123,6 +122,14 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
 	return
+end
+
+M.root_dir = function(client)
+	if client.name == "tsserver" then
+		M.util.root_pattern("package.json")
+	elseif client.name == "deno" then
+		M.util.root_pattern("deno.json", "deno.jsonc")
+	end
 end
 
 M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
