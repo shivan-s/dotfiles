@@ -14,6 +14,7 @@ local lspconfig = require("lspconfig")
 local servers = {
   "ansiblels",
   "cucumber_language_server",
+  "denols",
   "dockerls",
   "emmet_ls",
   "esbonio",

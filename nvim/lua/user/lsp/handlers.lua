@@ -83,8 +83,11 @@ local function lsp_keymaps(bufnr)
 	-- [[ vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]) ]]
 end
 
+
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
+		client.server_capabilities.document_formatting = false
+    elseif client.name == "deno" then
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "lua_ls" then
 		client.server_capabilities.document_formatting = false
