@@ -25,6 +25,9 @@ set -gx DJANGO_DEVELOPMENT 1
 set -gx PIPENV_VENV_IN_PROJECT 1
 set -gx PYRIGHT_PYTHON_FORCE_VERSION latest
 
+# Flutter
+fish_add_path $HOME/flutter/bin
+
 # Go set up
 set -x GOPATH $HOME/Projects/go/
 fish_add_path /$GOPATH/bin

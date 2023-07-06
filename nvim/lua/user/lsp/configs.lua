@@ -14,7 +14,7 @@ local lspconfig = require("lspconfig")
 local servers = {
   "ansiblels",
   "cucumber_language_server",
-  "denols",
+  --[[ "denols", ]]
   "dockerls",
   "emmet_ls",
   "esbonio",
@@ -43,9 +43,9 @@ lsp_installer.setup({
 
 for _, server in pairs(servers) do
   local opts = {
+    --[[ root_dir = require("user.lsp.handlers").root_dir, ]]
     on_attach = require("user.lsp.handlers").on_attach,
     capabilities = require("user.lsp.handlers").capabilities,
-    root_dir = require("user.lsp.handlers").root_dir,
   }
   local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
   if has_custom_opts then

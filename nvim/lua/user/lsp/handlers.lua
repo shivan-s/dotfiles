@@ -124,13 +124,13 @@ if not status_ok then
 	return
 end
 
-M.root_dir = function(client)
-	if client.name == "tsserver" then
-		M.util.root_pattern("package.json")
-	elseif client.name == "deno" then
-		M.util.root_pattern("deno.json", "deno.jsonc")
-	end
-end
+--[[ M.root_dir = function(client) ]]
+--[[ 	if client.name == "tsserver" then ]]
+--[[ 	    cmp_nvim_lsp.util.root_pattern("package.json") ]]
+--[[ 	elseif client.name == "deno" then ]]
+--[[ 		cmp_nvim_lsp.util.root_pattern("deno.json", "deno.jsonc") ]]
+--[[ 	end ]]
+--[[ end ]]
 
 M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 

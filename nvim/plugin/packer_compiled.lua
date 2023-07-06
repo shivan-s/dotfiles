@@ -119,10 +119,20 @@ _G.packer_plugins = {
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/color-converter.nvim",
     url = "https://github.com/NTBBloodbath/color-converter.nvim"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   fd = {
     loaded = true,
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/fd",
     url = "https://github.com/sharkdp/fd"
+  },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -144,6 +154,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["iron.nvim"] = {
+    loaded = true,
+    path = "/Users/shivan/.local/share/nvim/site/pack/packer/start/iron.nvim",
+    url = "https://github.com/hkupty/iron.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
