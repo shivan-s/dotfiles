@@ -19,14 +19,15 @@ M.setup = function()
 
 	local config = {
 		-- disable virtual text
-		virtual_text = true,
+		virtual_text = false,
 		-- show signs
 		signs = {
-			active = signs,
+			--[[ active = signs, ]]
+			active = false,
 		},
-		update_in_insert = true,
-		underline = true,
-		severity_sort = true,
+		update_in_insert = false,
+		underline = false,
+		severity_sort = false,
 		float = {
 			focusable = false,
 			style = "minimal",
