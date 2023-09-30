@@ -65,6 +65,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
 keymap("n", "<C-p>", "<cmd>lua require'telescope.builtin'.git_files()<CR>", opts)
 keymap("n", "<leader>lg", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>bf", "<cmd>Telescope buffers<CR>", opts)
 
 -- Undotree
 keymap("n", "<leader>u", "<cmd>:UndotreeToggle<CR>", opts)
@@ -82,16 +83,16 @@ keymap("n", "<leader>n", "<cmd>Neogen<CR>", opts)
 keymap("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", opts)
 
 -- Tagbar
-keymap("n", "<leader>t", ":TagbarToggle<CR>", opts)
+keymap("n", "<leader>t", "<cmd>TagbarToggle<CR>", opts)
 
 --Re Source
-keymap("n", "<leader>so", ":source $MYINIT<CR>", opts)
+keymap("n", "<leader>so", "<cmd>source $MYINIT<CR>", opts)
 
 -- Exit from buffer
-keymap("n", "<leader>bd", ":bd", opts)
+keymap("n", "<leader>bd", "<cmd>bd<CR>", opts)
 
 -- Carbon
-keymap("v", "<leader>cn", ":CarbonNow<CR>", { silent = true })
+keymap("v", "<leader>cn", "<cmd>CarbonNow<CR>", { silent = true })
 
 -- Daps
 local gkeymap = vim.keymap.set
@@ -104,3 +105,12 @@ gkeymap("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakp
 gkeymap("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
 gkeymap("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
 gkeymap("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>")
+
+-- Notebook
+keymap("n", "<expr><silent><leader>r", "nvim_exec('MagmaEvaluateOperator', v:true)", opts)
+keymap("n", "<leader>rr", ":MagmaEvaluateLine<CR>", opts)
+keymap("v", "<leader>r", ":<C-u>MagmaEvaluateVisual<CR>", opts)
+keymap("n", "<leader>rc", ":MagmaReevaluateCell", opts)
+keymap("n", "<leader>rd", ":MagmaDelete", opts)
+keymap("n", "<leader>ro", ":MagmaShowOutput", opts)
+keymap("n", "<leader>ro", ":noautocmd MagmaEnterOutput", opts)

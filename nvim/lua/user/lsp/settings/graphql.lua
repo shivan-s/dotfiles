@@ -1,11 +1,11 @@
 return {
   settings = {
-    filetypes = {
+    filestypes = {
       "graphql",
       "typescript",
       "javascript",
       "typescriptreact",
       "javascriptreact",
-    }
+    },
   },
 }

@@ -1,1 +1,3 @@
-return { settings = {} }
+return {
+	settings = {},
+}

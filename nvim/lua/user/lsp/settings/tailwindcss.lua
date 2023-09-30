@@ -1,3 +1,11 @@
 return {
-	settings = {},
+	settings = {
+		tailwindCSS = {
+			experimental = {
+				classRegex = {
+					{ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+				},
+			},
+		},
+	},
 }

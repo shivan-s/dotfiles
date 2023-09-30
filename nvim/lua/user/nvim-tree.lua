@@ -1,7 +1,6 @@
--- ==========================================
+-- ========
 -- Nvimtree
--- https://github.com/nvim-tree/nvim-tree.lua
--- ==========================================
+-- ========
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 vim.g.nvim_tree_icons = {

@@ -22,12 +22,11 @@ M.setup = function()
 		virtual_text = false,
 		-- show signs
 		signs = {
-			--[[ active = signs, ]]
-			active = false,
+			active = signs,
 		},
-		update_in_insert = false,
+		update_in_insert = true,
 		underline = false,
-		severity_sort = false,
+		severity_sort = true,
 		float = {
 			focusable = false,
 			style = "minimal",
@@ -81,25 +80,19 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	vim.cmd([[ command! Format :lua vim.lsp.buf.format() ]])
-	-- [[ vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]) ]]
+	-- vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 end
 
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.document_formatting = false
-	elseif client.name == "deno" then
-		client.server_capabilities.document_formatting = false
 	elseif client.name == "lua_ls" then
-		client.server_capabilities.document_formatting = false
-	elseif client.name == "cssls" then
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "rust_analyzer" then
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "jedi_language_server" then
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "gopls" then
-		client.server_capabilities.document_formatting = false
-	elseif client.name == "graphql" then
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "eslint" then
 		client.server_capabilities.document_formatting = false
@@ -113,7 +106,11 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "svelte" then
 		client.server_capabilities.document_formatting = false
+	elseif client.name == "graphql" then
+		client.server_capabilities.document_formatting = false
 	elseif client.name == "sqlls" then
+		client.server_capabilities.document_formatting = false
+	elseif client.name == "ruff_lsp" then
 		client.server_capabilities.document_formatting = false
 	end
 	lsp_keymaps(bufnr)
@@ -126,14 +123,6 @@ local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
 	return
 end
-
---[[ M.root_dir = function(client) ]]
---[[ 	if client.name == "tsserver" then ]]
---[[ 	    cmp_nvim_lsp.util.root_pattern("package.json") ]]
---[[ 	elseif client.name == "deno" then ]]
---[[ 		cmp_nvim_lsp.util.root_pattern("deno.json", "deno.jsonc") ]]
---[[ 	end ]]
---[[ end ]]
 
 M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 

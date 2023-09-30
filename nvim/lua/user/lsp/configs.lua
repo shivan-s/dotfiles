@@ -13,29 +13,27 @@ local lspconfig = require("lspconfig")
 
 local servers = {
   "ansiblels",
-  "cssls",
   "cucumber_language_server",
-  --[[ "denols", ]]
   "dockerls",
   "emmet_ls",
   "esbonio",
   "eslint",
   "gopls",
   "graphql",
-  "hls",
   "jedi_language_server",
   "jsonls",
-  --[[ "ltex", ]]
+  "ltex",
   "lua_ls",
   "prismals",
   "rust_analyzer",
-  "sqlls",
   "svelte",
   "tailwindcss",
   "taplo",
   "tsserver",
   "yamlls",
   "zk",
+  "ruff_lsp",
+  "sqlls",
 }
 
 lsp_installer.setup({
@@ -44,7 +42,6 @@ lsp_installer.setup({
 
 for _, server in pairs(servers) do
   local opts = {
-    --[[ root_dir = require("user.lsp.handlers").root_dir, ]]
     on_attach = require("user.lsp.handlers").on_attach,
     capabilities = require("user.lsp.handlers").capabilities,
   }

@@ -59,7 +59,6 @@ return packer.startup(function(use)
   use("kyazdani42/nvim-web-devicons")
 
   -- Bufferline
-  use("akinsho/bufferline.nvim")
   use("moll/vim-bbye")
 
   --  Treesitter
@@ -92,9 +91,6 @@ return packer.startup(function(use)
   use("williamboman/mason-lspconfig.nvim")
   use("neovim/nvim-lspconfig")
   use("jose-elias-alvarez/null-ls.nvim")
-
-  -- Lightline
-  use("nvim-lualine/lualine.nvim")
 
   -- Git
   use("lewis6991/gitsigns.nvim")
@@ -180,14 +176,8 @@ return packer.startup(function(use)
   -- Carbon Now
   use("ellisonleao/carbon-now.nvim")
 
-  -- Flutter tools
-  use({
-    "akinsho/flutter-tools.nvim",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim", -- optional for vim.ui.select
-    },
-  })
+  --Notebooks
+  use({ "dccsillag/magma-nvim", run = ":UpdateRemotePlugins" })
 
   -- End of Custom Plugins
   if PACKER_BOOTSTRAP then
