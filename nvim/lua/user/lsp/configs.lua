@@ -13,6 +13,7 @@ local lspconfig = require("lspconfig")
 
 local servers = {
   "ansiblels",
+  "cssls",
   "cucumber_language_server",
   --[[ "denols", ]]
   "dockerls",
@@ -24,7 +25,7 @@ local servers = {
   "hls",
   "jedi_language_server",
   "jsonls",
-  "ltex",
+  --[[ "ltex", ]]
   "lua_ls",
   "prismals",
   "rust_analyzer",

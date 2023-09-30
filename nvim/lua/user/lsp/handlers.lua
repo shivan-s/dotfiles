@@ -91,6 +91,8 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "lua_ls" then
 		client.server_capabilities.document_formatting = false
+	elseif client.name == "cssls" then
+		client.server_capabilities.document_formatting = false
 	elseif client.name == "rust_analyzer" then
 		client.server_capabilities.document_formatting = false
 	elseif client.name == "jedi_language_server" then
