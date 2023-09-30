@@ -1,8 +1,7 @@
--- ========
+-- ==========================================
 -- Nvimtree
--- ========
--- following options are the default
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
+-- https://github.com/nvim-tree/nvim-tree.lua
+-- ==========================================
 vim.g.nvim_tree_icons = {
 	default = "",
 	symlink = "",
@@ -29,28 +28,12 @@ if not status_ok then
 	return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-	return
-end
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
--- Replaces auto_close
-local tree_cb = nvim_tree_config.nvim_tree_callback
-vim.api.nvim_create_autocmd("BufEnter", {
-	nested = true,
-	callback = function()
-		if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
-			vim.cmd("quit")
-		end
-	end,
-})
+vim.opt.termguicolors = true
 
 nvim_tree.setup({
-	disable_netrw = true,
-	hijack_netrw = true,
-	open_on_tab = false,
-	hijack_cursor = false,
-	update_cwd = true,
 	diagnostics = {
 		enable = true,
 		icons = {
@@ -71,7 +54,6 @@ nvim_tree.setup({
 	},
 	filters = {
 		dotfiles = false,
-		custom = {},
 	},
 	git = {
 		enable = true,
@@ -80,16 +62,7 @@ nvim_tree.setup({
 	},
 	view = {
 		width = 40,
-		hide_root_folder = false,
 		side = "left",
-		mappings = {
-			custom_only = false,
-			list = {
-				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
-				{ key = "h", cb = tree_cb("close_node") },
-				{ key = "v", cb = tree_cb("vsplit") },
-			},
-		},
 		number = false,
 		relativenumber = false,
 	},
