@@ -36,6 +36,14 @@ author = "Shivan"
 
 
 # GROUP OVERRIDES
+[group.standup]
+paths = ["notes/Standup"]
+
+[group.standup.note]
+filename = "{{format-date now}}"
+extension = "md"
+template = "standup.md"
+
 [group.daily]
 paths = ["journal"]
 
@@ -103,6 +111,12 @@ ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --title $argv'
 
 # new youtube note
 ney = 'zk new --no-input "$ZK_NOTEBOOK_DIR/ideas" --group youtube --title $argv'
+
+# new standup entry
+standup = 'zk new --no-input "$ZK_NOTEBOOK_DIR/Standup"'
+
+# list standup
+ls-standup = 'zk edit "$ZK_NOTEBOOK_DIR/Standup" --sort created- --interactive'
 
 journal = "zk edit --sort created- $ZK_NOTEBOOK_DIR/journal --interactive"
 

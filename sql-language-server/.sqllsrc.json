@@ -1,0 +1,8 @@
+{
+  "connections": [
+    {
+      "name": "postgres-project",
+      "adapter": "postgres"
+    }
+  ]
+}
