@@ -1,6 +1,21 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_ea:exa\x20\x2dla\x20\x2d\x2dgit\x20\x2ds\x20modified\x20\x2dr\x20\x2d\x2dicons\x20\x2d\x2dheader
+SETUVAR _fish_abbr_et:exa\x20\x2dT\x20\x2d\x2dgit\x2dignore\x20\x2d\x2dicons
+SETUVAR _fish_abbr_ex:exa\x20\x2da\x20\x2d\x2dicons\x20\x2ds\x20modified\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
+SETUVAR _fish_abbr_firefox:open\x20\x2da\x20firefox
+SETUVAR _fish_abbr_fishconfig:nvim\x20/Users/shivan/\x2edotfiles/fish/config\x2efish
+SETUVAR _fish_abbr_fishso:source\x20/Users/shivan/\x2econfig/fish/config\x2efish
+SETUVAR _fish_abbr_gia:git\x20add
+SETUVAR _fish_abbr_gic:git\x20commit\x20\x2dm\x20\x27
+SETUVAR _fish_abbr_gich:git\x20checkout
+SETUVAR _fish_abbr_gif:git\x20fetch
+SETUVAR _fish_abbr_gil:git\x20log\x20\x2d\x2doneline
+SETUVAR _fish_abbr_gip:git\x20pull
+SETUVAR _fish_abbr_la:ls\x20\x2dalh
+SETUVAR _fish_abbr_t:tmux
+SETUVAR _fish_abbr_vimconfig:nvim\x20/Users/shivan/\x2edotfiles/nvim/
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/shivan/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/shivan/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:/Users/shivan/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e/Users/shivan/\x2econfig/fish/functions/_nvm_list\x2efish\x1e/Users/shivan/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e/Users/shivan/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e/Users/shivan/\x2econfig/fish/functions/nvm\x2efish\x1e/Users/shivan/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e/Users/shivan/\x2econfig/fish/completions/nvm\x2efish
 SETUVAR _fisher_lilyball_2F_nix_2D_env_2E_fish_files:/Users/shivan/\x2econfig/fish/conf\x2ed/nix\x2denv\x2efish
@@ -34,6 +49,6 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/shivan/flutter/bin\x1e/Applications/Racket/bin\x1e/Users/shivan/\x2eghcup/bin\x1e/Users/shivan/\x2elocal/bin\x1e//Users/shivan/Projects/go/bin\x1e/Users/shivan/Projects/go/bin\x1e//Users/shivan/go/bin\x1e/Users/shivan/go/bin\x1e//Users/shivan/\x2ecargo/bin\x1e/Users/shivan/\x2ecargo/bin\x1e//Users/shivan/\x2elocal/bin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/node\x4016/bin\x1e
+SETUVAR fish_user_paths:/opt/homebrew/opt/libpq/bin\x1e/Users/shivan/flutter/bin\x1e/Applications/Racket/bin\x1e/Users/shivan/\x2eghcup/bin\x1e/Users/shivan/\x2elocal/bin\x1e//Users/shivan/Projects/go/bin\x1e/Users/shivan/Projects/go/bin\x1e//Users/shivan/go/bin\x1e/Users/shivan/go/bin\x1e//Users/shivan/\x2ecargo/bin\x1e/Users/shivan/\x2ecargo/bin\x1e//Users/shivan/\x2elocal/bin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/node\x4016/bin\x1e
 SETUVAR nvm_data:/Users/shivan/\x2elocal/share/nvm
 SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist
