@@ -16,6 +16,13 @@ Move into a hidden file to make things look nice.
 mv ~/dotfiles ~/.dotfiles
 ```
 
+Run migration shell.
+
+```shell
+cd ~/dotfiles
+./move.sh
+```
+
 ## Requirements
 
 - fish
