@@ -17,8 +17,8 @@ fish_add_path /$HOME/.cargo/bin
 fish_add_path /opt/homebrew/opt/libpq/bin
 
 # psql
-set -gx LDFLAGS "-L/opt/homebrew/opt/libpq/lib"
-set -gx CPPFLAGS "-I/opt/homebrew/opt/libpq/include"
+set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
+set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include
 
 # Python set up
 set -gx PYTHONDONTWRITEBYTECODE 1
@@ -38,7 +38,7 @@ alias cp="cp -i"
 alias firefox="open -a firefox"
 alias vim="nvim"
 alias psql="pgcli"
-abbr --add t "tmux"
+abbr --add t tmux
 abbr --add la "ls -alh"
 abbr --add ex "exa -a --icons -s modified --group-directories-first"
 abbr --add ea "exa -la --git -s modified -r --icons --header"
@@ -46,6 +46,7 @@ abbr --add et "exa -T --git-ignore --icons"
 abbr --add gia "git add"
 abbr --add gic "git commit -m '"
 abbr --add gip "git pull"
+abbr --add gp "git push"
 abbr --add gich "git checkout"
 abbr --add gil "git log --oneline"
 abbr --add gif "git fetch"
@@ -84,7 +85,7 @@ set -gx FZF_DEFAULT_OPTS "--layout=reverse --preview=bat"
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 
 # Racket

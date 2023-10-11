@@ -13,6 +13,7 @@ SETUVAR _fish_abbr_gich:git\x20checkout
 SETUVAR _fish_abbr_gif:git\x20fetch
 SETUVAR _fish_abbr_gil:git\x20log\x20\x2d\x2doneline
 SETUVAR _fish_abbr_gip:git\x20pull
+SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_la:ls\x20\x2dalh
 SETUVAR _fish_abbr_t:tmux
 SETUVAR _fish_abbr_vimconfig:nvim\x20/Users/shivan/\x2edotfiles/nvim/
