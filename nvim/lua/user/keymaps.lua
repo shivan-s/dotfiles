@@ -63,8 +63,8 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
-keymap("n", "<C-p>", "<cmd>lua require'telescope.builtin'.git_files()<CR>", opts)
-keymap("n", "<leader>lg", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>gf", "<cmd>lua require'telescope.builtin'.git_files()<CR>", opts)
+keymap("n", "<leader>gf", "<cmd>lua require'telescope.builtin'.live_grep()<CR>", opts)
 keymap("n", "<leader>bf", "<cmd>Telescope buffers<CR>", opts)
 
 -- Undotree

@@ -39,6 +39,7 @@ alias firefox="open -a firefox"
 alias vim="nvim"
 alias psql="pgcli"
 abbr --add t tmux
+abbr --add v nvim
 abbr --add la "ls -alh"
 abbr --add ex "exa -a --icons -s modified --group-directories-first"
 abbr --add ea "exa -la --git -s modified -r --icons --header"

@@ -69,7 +69,7 @@ null_ls.setup({
       "$FILENAME",
     }),
     -- SQL
-    formatting.sqlfmt,
+    formatting.sqlfluff,
     diagnostics.sqlfluff.with({
       extra_args = { '--dialect', 'postgres' }
     }),
