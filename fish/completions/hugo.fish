@@ -173,4 +173,3 @@ complete -c hugo -e
 # The call to __hugo_prepare_completions will setup __hugo_comp_results
 # which provides the program's completion choices.
 complete -c hugo -n '__hugo_prepare_completions' -f -a '$__hugo_comp_results'
-
