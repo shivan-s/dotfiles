@@ -1,6 +1,4 @@
 function fish_greeting
-    echo Hello $USER,
-    echo The time is (set_color green; date +%T; set_color normal)
 end
 
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
@@ -30,7 +28,7 @@ set -gx PYRIGHT_PYTHON_FORCE_VERSION latest
 set -x GOPATH $HOME/Projects/go/
 fish_add_path /$GOPATH/bin
 alias go="grc go"
-alias godev="cd $HOME/Projects/go/src/github.com/shivan-s/"
+# alias godev="cd $HOME/Projects/go/src/github.com/shivan-eyespace/"
 
 # Fish commands
 alias rm="rm -i"
