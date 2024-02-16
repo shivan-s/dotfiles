@@ -11,3 +11,4 @@ mkdir $HOME/.zk
 ln -sf $(pwd)/zk/templates $HOME/.zk/templates
 ln -sf $(pwd)/zk/.config $HOME/.zk/.config
 
+git config --global push.autoSetupRemote true
