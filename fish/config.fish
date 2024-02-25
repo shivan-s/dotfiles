@@ -94,3 +94,6 @@ end
 
 # Racket
 fish_add_path /Applications/Racket/bin/
+
+# flutter
+fish_add_path $HOME/development/flutter/bin/
