@@ -27,8 +27,6 @@ set -gx PYRIGHT_PYTHON_FORCE_VERSION latest
 # Go set up
 set -x GOPATH $HOME/Projects/go/
 fish_add_path /$GOPATH/bin
-alias go="grc go"
-# alias godev="cd $HOME/Projects/go/src/github.com/shivan-eyespace/"
 
 # Fish commands
 alias rm="rm -i"
