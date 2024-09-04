@@ -105,6 +105,8 @@ else
         . "/opt/homebrew/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
     else
         set -x PATH "/opt/homebrew/Caskroom/miniconda/base/bin" $PATH
+    end
+end
 if test -f /opt/miniconda3/bin/conda
     eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 else
