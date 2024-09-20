@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 ln -sf $(pwd)/nvim $HOME/.config/nvim
+ln -sf $(pwd)/alacritty $HOME/.config/
 ln -sf $(pwd)/fish $HOME/.config/fish
 ln -sf $(pwd)/omf $HOME/.config/omf
 ln -sf $(pwd)/.tmux.conf $HOME/.tmux.conf

@@ -1,0 +1,25 @@
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "buttonless"
+
+opacity = 0.9
+blur = true
+
+option_as_alt = "Both"
+
+startup_mode = "Maximized"
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "MonaspiceRn Nerd Font Mono"
+style = "Light"
