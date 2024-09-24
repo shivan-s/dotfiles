@@ -28,11 +28,11 @@ family = "MonaspiceRn Nerd Font Mono"
 style = "Bold"
 
 [font.italic]
-family = "MonaspiceAr Nerd Font Mono"
+family = "MonaspiceRn Nerd Font Mono"
 style = "Itallic"
 
 [font.bold_italic]
-family = "MonaspiceAr Nerd Font Mono"
+family = "MonaspiceRn Nerd Font Mono"
 style = "Bold Itallic"
 
 [cursor.style]
