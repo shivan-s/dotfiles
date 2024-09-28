@@ -1,4 +1,5 @@
 function fish_greeting
+    fastfetch
 end
 
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
