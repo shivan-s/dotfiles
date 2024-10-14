@@ -32,7 +32,7 @@ fish_add_path /$GOPATH/bin
 # Fish commands
 alias rm="rm -i"
 alias cp="cp -i"
-alias firefox="open -a firefox"
+alias firefox="/Applications/Firefox\ Developer\ Edition.app/"
 alias vim="nvim"
 alias psql="pgcli"
 abbr --add t "tmux"

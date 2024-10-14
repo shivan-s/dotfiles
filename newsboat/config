@@ -1,0 +1,10 @@
+include ~/.config/newsboat/dark
+
+bind-key h quit
+bind-key j down
+bind-key k up
+bind-key l open
+
+browser "open '%u'"
+
+text-width 72
