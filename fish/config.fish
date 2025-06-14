@@ -39,9 +39,6 @@ abbr --add t "tmux"
 abbr --add lg "lazygit"
 abbr --add v "nvim"
 abbr --add zs "zk standup" # for work
-abbr --add norg "nvim -c :Neorg"
-abbr --add today "nvim -c ':Neorg journal today'"
-abbr --add journal "nvim -c ':Neorg journal'"
 abbr --add la "eza -la --git -s modified -r --icons --header"
 abbr --add ls "eza -a --icons -s modified --group-directories-first"
 abbr --add tree "eza -T --git-ignore --icons"
@@ -221,3 +218,7 @@ alias zi=__zoxide_zi
 # ~/.config/fish/config.fish):
 #
 #   zoxide init fish | source
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
