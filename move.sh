@@ -8,6 +8,7 @@ ln -sf $(pwd)/omf $HOME/.config/
 ln -sf $(pwd)/.tmux.conf $HOME/
 ln -sf $(pwd)/.tmux.conf.local $HOME/
 ln -sf $(pwd)/sql-language-server $HOME/.config/
+ln -sf $(pwd)/pgcli $HOME/.config/
 
 mkdir $HOME/.zk
 ln -sf $(pwd)/zk/templates $HOME/.zk/
