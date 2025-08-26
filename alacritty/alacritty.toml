@@ -47,4 +47,7 @@ hide_when_typing = true
 [general]
 live_config_reload = true
 working_directory = "None"
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"] # dark
+# import = ["~/.config/alacritty/catppuccin-latte.toml"] # light
+# import = ["~/.config/alacritty/catppuccin-frappe.toml"]
+# import = ["~/.config/alacritty/catppuccin-macchiato.toml"]

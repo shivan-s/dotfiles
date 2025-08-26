@@ -1,11 +1,11 @@
 "[🙋 Me]"
 "query:me:tags # \"me\""
 https://shivan.xyz/posts/index.xml me !
-https://email.shivan.xyz/feed me !
 
 "[📝 Blogs]"
 https://github.blog/developer-skills/feed/
 https://svelte.dev/blog/rss.xml
+https://nodejs.org/en/feed/blog.xml
 https://world.hey.com/dhh/feed.atom
 https://scottberkun.com/feed/
 https://sive.rs/en.atom
