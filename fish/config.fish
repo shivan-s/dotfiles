@@ -28,10 +28,11 @@ set -gx PYRIGHT_PYTHON_FORCE_VERSION latest
 # Go set up
 set -x GOPATH $HOME/Projects/go/
 fish_add_path /$GOPATH/bin
-
 # Fish commands
 alias rm="rm -i"
 alias cp="cp -i"
+alias cd="z"
+alias ls="eza -a --icons -s modified --group-directories-first"
 alias firefox="/Applications/Firefox\ Developer\ Edition.app/"
 alias vim="nvim"
 alias psql="pgcli"
@@ -40,7 +41,6 @@ abbr --add lg "lazygit"
 abbr --add v "nvim"
 abbr --add zs "zk standup" # for work
 abbr --add la "eza -la --git -s modified -r --icons --header"
-abbr --add ls "eza -a --icons -s modified --group-directories-first"
 abbr --add tree "eza -T --git-ignore --icons"
 abbr --add gia "git add"
 abbr --add gic "git commit -m '"
