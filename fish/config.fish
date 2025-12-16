@@ -222,3 +222,5 @@ alias zi=__zoxide_zi
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
