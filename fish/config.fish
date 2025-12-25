@@ -9,7 +9,6 @@ set -gx EDITOR nvim
 set -gx CLICOLOR 1
 set -gx LSCOLORS Exfxcxdxbxegedabagacad
 
-fish_add_path /opt/homebrew/opt/node@16/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path /$HOME/.local/bin
 fish_add_path /$HOME/.cargo/bin
@@ -39,7 +38,6 @@ alias psql="pgcli"
 abbr --add t "tmux"
 abbr --add lg "lazygit"
 abbr --add v "nvim"
-abbr --add zs "zk standup" # for work
 abbr --add la "eza -la --git -s modified -r --icons --header"
 abbr --add tree "eza -T --git-ignore --icons"
 abbr --add gia "git add"

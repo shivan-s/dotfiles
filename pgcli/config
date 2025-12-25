@@ -52,7 +52,7 @@ generate_aliases = True
 log_file = default
 
 # keyword casing preference. Possible values "lower", "upper", "auto"
-keyword_casing = auto
+keyword_casing = upper
 
 # casing_file location.
 # In Unix/Linux: ~/.config/pgcli/casing
@@ -79,7 +79,7 @@ log_level = INFO
 
 # Order of columns when expanding * to column list
 # Possible values: "table_order" and "alphabetic"
-asterisk_column_order = table_order
+asterisk_column_order = alphabetic
 
 # Whether to qualify with table alias/name when suggesting columns
 # Possible values: "always", never" and "if_more_than_one_table"
@@ -104,7 +104,7 @@ table_format = github
 # Syntax Style. Possible values: manni, igor, xcode, vim, autumn, vs, rrt,
 # native, perldoc, borland, tango, emacs, friendly, monokai, paraiso-dark,
 # colorful, murphy, bw, pastie, paraiso-light, trac, default, fruity
-syntax_style = colorful
+syntax_style = monokai
 
 # Keybindings:
 # When Vi mode is enabled you can use modal editing features offered by Vi in the REPL.
