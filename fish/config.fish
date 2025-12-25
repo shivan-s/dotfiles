@@ -70,14 +70,15 @@ function swapempty
     rm "$HOME/.local/share/nvim/swap/*"
 end
 
-# zk
-set -gx ZK_NOTEBOOK_DIR $HOME/notes
-
 # pipenv completions
 eval (env _PIPENV_COMPLETE=fish_source pipenv)
 
-# FZF
+# fzf + fd
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --preview=bat"
+set -gx FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"
+set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+set -gx FZF_ALT_C_COMMAND "fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+fzf --fish | source
 
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
@@ -87,9 +88,6 @@ end
 
 # Racket
 fish_add_path /Applications/Racket/bin/
-
-# flutter
-fish_add_path $HOME/development/flutter/bin/
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -112,6 +110,7 @@ else
     end
 end
 # <<< conda initialize <<<
+
 # alr
 fish_add_path /usr/local/bin/alr
 
