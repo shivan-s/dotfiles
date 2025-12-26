@@ -26,6 +26,5 @@ cd ~/dotfiles
 ## Requirements
 
 - fish
-- oh my fish
 - nvim
 - tmux
