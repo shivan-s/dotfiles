@@ -1,22 +1,12 @@
 function fish_greeting
-    fastfetch
 end
-
-alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
-status --is-interactive; and pyenv virtualenv-init - | source
 
 set -gx EDITOR nvim
 set -gx CLICOLOR 1
 set -gx LSCOLORS Exfxcxdxbxegedabagacad
 
-fish_add_path /opt/homebrew/bin
 fish_add_path /$HOME/.local/bin
 fish_add_path /$HOME/.cargo/bin
-fish_add_path /opt/homebrew/opt/libpq/bin
-
-# psql
-set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
-set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include
 
 # Python set up
 set -gx PYTHONDONTWRITEBYTECODE 1
@@ -27,17 +17,20 @@ set -gx PYRIGHT_PYTHON_FORCE_VERSION latest
 # Go set up
 set -x GOPATH $HOME/Projects/go/
 fish_add_path /$GOPATH/bin
-# Fish commands
+
+# Commands
 alias rm="rm -i"
 alias cp="cp -i"
 alias cd="z"
+alias find="fd"
+alias cat="bat"
 alias ls="eza -a --icons -s modified --group-directories-first"
-alias firefox="/Applications/Firefox\ Developer\ Edition.app/"
 alias vim="nvim"
 alias psql="pgcli"
 abbr --add t "tmux"
 abbr --add lg "lazygit"
-abbr --add v "nvim"
+abbr --add ld "lazydocker"
+abbr --add lsql "lazysql"
 abbr --add la "eza -la --git -s modified -r --icons --header"
 abbr --add tree "eza -T --git-ignore --icons"
 abbr --add gia "git add"
@@ -47,7 +40,6 @@ abbr --add gp "git push"
 abbr --add gich "git checkout"
 abbr --add gil "git log --oneline"
 abbr --add gif "git fetch"
-abbr --add ff "open -a firefox"
 abbr --add fishc "$EDITOR $HOME/.dotfiles/fish/config.fish"
 abbr --add fs "source $HOME/.config/fish/config.fish"
 abbr --add vimconfig "$EDITOR $HOME/.dotfiles/nvim/"
@@ -215,9 +207,5 @@ alias zi=__zoxide_zi
 # ~/.config/fish/config.fish):
 #
 #   zoxide init fish | source
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
