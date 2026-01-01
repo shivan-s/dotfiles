@@ -1,5 +1,6 @@
 [core]
 	editor = nvim
+
 [alias]
 	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
@@ -8,3 +9,37 @@
 
 [push]
 	autoSetupRemote = true
+	default = current
+
+[pull]
+	default = current
+	rebase = true
+
+[rebase] 
+	autoStash = true
+	missingCommitsCheck = warn
+
+[core]
+	compression = 8
+	whitespace = error
+	preloadindex = true
+
+[log]
+	abbrevCommit = true
+	
+[advice]
+	addEmptyPathspec = false
+	pushNonFastForward = false
+	statusHints = false
+
+[url "git@github.com:"]
+	insteadOf = "gh:"
+
+[url "git@github.com:shivan-s"]
+	insteadOf = "shivan:"
+
+[commit]
+	gpgSign = true
+
+[gpg]
+	format = ssh
