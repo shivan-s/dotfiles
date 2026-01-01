@@ -33,13 +33,10 @@ abbr --add ld "lazydocker"
 abbr --add lsql "lazysql"
 abbr --add la "eza -la --git -s modified -r --icons --header"
 abbr --add tree "eza -T --git-ignore --icons"
-abbr --add gia "git add"
-abbr --add gic "git commit -m '"
-abbr --add gip "git pull"
+abbr --add gs "git status --short"
 abbr --add gp "git push"
 abbr --add gich "git checkout"
 abbr --add gil "git log --oneline"
-abbr --add gif "git fetch"
 abbr --add fishc "$EDITOR $HOME/.dotfiles/fish/config.fish"
 abbr --add fs "source $HOME/.config/fish/config.fish"
 abbr --add vimconfig "$EDITOR $HOME/.dotfiles/nvim/"
@@ -105,6 +102,9 @@ end
 
 # alr
 fish_add_path /usr/local/bin/alr
+
+# Lazygit
+set -gx LG_CONFIG_FILE	"$HOME/.config/lazygit/config.yml"
 
 
 # =============================================================================
