@@ -22,3 +22,5 @@ ln -sf $(pwd)/lazygit/config.yml $HOME/.config/lazygit
 
 mkdir -p $HOME/.config/pgcli
 ln -sf $(pwd)/pgcli/config $HOME/.config/pgcli/config
+
+ln -sf $(pwd)/opencode.jsonc $HOME/.config/opencode/

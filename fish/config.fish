@@ -208,3 +208,6 @@ alias zi=__zoxide_zi
 #
 #   zoxide init fish | source
 # =======
+
+# opencode
+fish_add_path /Users/shivan/.opencode/bin
