@@ -11,7 +11,7 @@ ln -sf $(pwd)/fish $HOME/.config/
 ln -sf $(pwd)/.wezterm.lua $HOME/
 
 mkdir -p $HOME/.config/tmux
-ln -sf $(pwd)/.tmux.conf $HOME/.config/tmux/.tmux.conf
+ln -sf $(pwd)/tmux.conf $HOME/.config/tmux/
 mkdir -p $HOME/.config/tmux/plugins/catppuccin
 git clone -b v2.1.3 https://github.com/catppuccin/tmux.git $HOME/.config/tmux/plugins/catppuccin/tmux
 
