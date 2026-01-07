@@ -23,3 +23,6 @@ curl https://mise.run | sh
 
 # 1password
 brew install 1password-cli
+
+# urlview
+brew install urlview

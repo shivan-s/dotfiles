@@ -8,3 +8,9 @@ bind-key l open
 browser "open '%u'"
 
 text-width 72
+
+auto-reload yes
+reload-time 10
+notify-always yes
+notify-format "%d %n %f"
+notify-program "~/.config/tmux/plugins/tmux-newsboat/bin/tmux-newsboat"
