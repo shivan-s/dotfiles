@@ -211,3 +211,6 @@ alias zi=__zoxide_zi
 
 # opencode
 fish_add_path /Users/shivan/.opencode/bin
+
+# mise
+~/.local/bin/mise activate fish | source
