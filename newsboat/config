@@ -1,5 +1,3 @@
-include ~/.config/newsboat/dark
-
 bind-key h quit
 bind-key j down
 bind-key k up
