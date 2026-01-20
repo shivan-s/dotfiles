@@ -24,3 +24,4 @@ mkdir -p $HOME/.config/pgcli
 ln -sf $(pwd)/pgcli/config $HOME/.config/pgcli/config
 
 ln -sf $(pwd)/opencode.jsonc $HOME/.config/opencode/
+ln -sf $(pwd)/AGENTS.md $HOME/.config/opencode/
