@@ -1,6 +1,6 @@
 "[🙋 Me]"
 "query:me:tags # \"me\""
-https://shivan.xyz/posts/index.xml me !
+https://shivan.xyz/feed.xml me !
 
 "[📝 Blogs]"
 https://github.blog/developer-skills/feed/
@@ -15,6 +15,7 @@ https://www.allthingsdistributed.com/atom.xml
 https://mynoise.net/rss.xml
 https://blopker.com/rss.xml
 https://nerdy.dev/rss.xml
+https://www.gingerbill.org/article/index.xml
 
 "[🎙️ Podcast]"
 https://feed.syntax.fm/
