@@ -25,3 +25,9 @@ ln -sf $(pwd)/pgcli/config $HOME/.config/pgcli/config
 
 ln -sf $(pwd)/opencode.jsonc $HOME/.config/opencode/
 ln -sf $(pwd)/AGENTS.md $HOME/.config/opencode/
+
+mkdir $HOME/.zk
+ln -sf $(pwd)/zk/templates $HOME/.zk/
+ln -sf $(pwd)/zk/.config $HOME/.zk/
+
+ln -sf $(pwd)/.gitconfig $HOME/.gitconfig
