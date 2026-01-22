@@ -62,6 +62,9 @@ end
 # pipenv completions
 eval (env _PIPENV_COMPLETE=fish_source pipenv)
 
+# zk
+set -gx ZK_NOTEBOOK_DIR $HOME/notes
+
 # fzf + fd
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --preview=bat"
 set -gx FZF_DEFAULT_COMMAND "fd --hidden --strip-cwd-prefix --exclude .git"

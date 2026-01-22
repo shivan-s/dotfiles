@@ -28,6 +28,6 @@ ln -sf $(pwd)/AGENTS.md $HOME/.config/opencode/
 
 mkdir $HOME/.zk
 ln -sf $(pwd)/zk/templates $HOME/.zk/
-ln -sf $(pwd)/zk/.config $HOME/.zk/
+ln -sf $(pwd)/zk/config.toml $HOME/.zk/
 
 ln -sf $(pwd)/.gitconfig $HOME/.gitconfig

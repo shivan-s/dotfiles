@@ -19,6 +19,13 @@ filename = "{{format-date now}}"
 extension = "md"
 template = "standup.md"
 
+[group.daily]
+paths = ["notes/daily"]
+
+[group.daily.note]
+filename = "{{format-date now}}"
+extension = "md"
+template = "daily.md"
 
 [format.markdown]
 hashtags = true
@@ -49,7 +56,6 @@ update = "cd $ZK_NOTEBOOK_DIR; git add -A; git commit -am 'updating'; git push; 
 
 [lsp]
 [lsp.diagnostics]
-# Report titles of wiki-links as hints.
 wiki-title = "hint"
-# Warn for dead links between notes.
 dead-link = "error"
+missing-backlink = { level = "warning", position = "bottom" }
