@@ -6,6 +6,8 @@ brew update
 
 # neovim
 brew install neovim
+# Formatter for neovim
+brew install sqruff
 
 # gh
 brew install gh
@@ -26,3 +28,13 @@ brew install 1password-cli
 
 # urlview
 brew install urlview
+
+# pipx
+brew install pipx
+
+# fzf
+brew install fzf
+
+#newsboat
+brew install newsboat
+
