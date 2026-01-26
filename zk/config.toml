@@ -1,3 +1,6 @@
+[notebook]
+dir = "~/notes"
+
 [note]
 language = "en"
 default-title = "Untitled"
@@ -27,6 +30,14 @@ filename = "{{format-date now}}"
 extension = "md"
 template = "daily.md"
 
+[group.deepdive]
+paths = ["notes/deepdive"]
+
+[group.deepdive.note]
+filename = "{{format-date now}}"
+extension = "md"
+template = "deepdive.md"
+
 [format.markdown]
 hashtags = true
 colon-tags = true
@@ -45,12 +56,14 @@ edlast = "zk edit --limit 1 --sort modified- $argv"
 recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"
 lucky = "zk list --quiet --format full --sort random --limit 1"
 ls = "zk edit --interactive"
-t = "zk edit --interactive --tag $argv"
 
 config = 'nvim "$HOME/.dotfiles/zk/config.toml"'
 
-standup = 'zk new --no-input "$ZK_NOTEBOOK_DIR/Standup"'
-ls-standup = 'zk edit "$ZK_NOTEBOOK_DIR/Standup" --sort created- --interactive'
+standup = 'zk new --no-input "$ZK_NOTEBOOK_DIR/standup"'
+ls-standup = 'zk edit "$ZK_NOTEBOOK_DIR/standup" --sort created- --interactive'
+
+deepdive = 'zk new --no-input "$ZK_NOTEBOOK_DIR/deepdive"'
+ls-deepdive = 'zk edit "$ZK_NOTEBOOK_DIR/deepdive" --sort created- --interactive'
 
 update = "cd $ZK_NOTEBOOK_DIR; git add -A; git commit -am 'updating'; git push; cd -"
 
