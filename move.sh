@@ -29,3 +29,5 @@ ln -sf $(pwd)/AGENTS.md $HOME/.config/opencode/
 ln -sf $(pwd)/zk $HOME/.config/zk
 
 ln -sf $(pwd)/.gitconfig $HOME/.gitconfig
+
+ln -sf $(pwd)/gotz $HOME/.config/gotz

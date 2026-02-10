@@ -1,0 +1,77 @@
+{
+  "config_version": "1.0",
+  "timezones": [
+    {
+      "Name": "UTC",
+      "TZ": "Etc/UTC"
+    },
+    {
+      "Name": "Pacific/Auckland",
+      "TZ": "Pacific/Auckland"
+    },
+    {
+      "Name": "Australia/Adelaide",
+      "TZ": "Australia/Adelaide"
+    },
+    {
+      "Name": "Belgium",
+      "TZ": "Europe/Andorra"
+    },
+    {
+      "Name": "South Africa",
+      "TZ": "Africa/Maputo"
+    },
+    {
+      "Name": "Las Vegas",
+      "TZ": "America/Los_Angeles"
+    }
+  ],
+  "style": {
+    "symbols": "rectangles",
+    "custom_symbols": [
+      {
+        "Start": 6,
+        "Symbol": "▓"
+      },
+      {
+        "Start": 8,
+        "Symbol": "█"
+      },
+      {
+        "Start": 18,
+        "Symbol": "▓"
+      },
+      {
+        "Start": 22,
+        "Symbol": "░"
+      }
+    ],
+    "colorize": true,
+    "day_segments": {
+      "morning": 6,
+      "day": 8,
+      "evening": 18,
+      "night": 22
+    },
+    "coloring": {
+      "StaticColorMorning": "red",
+      "StaticColorDay": "yellow",
+      "StaticColorEvening": "red",
+      "StaticColorNight": "blue",
+      "StaticColorForeground": "",
+      "DynamicColorMorning": "red",
+      "DynamicColorDay": "yellow",
+      "DynamicColorEvening": "red",
+      "DynamicColorNight": "blue",
+      "DynamicColorForeground": "",
+      "DynamicColorBackground": ""
+    }
+  },
+  "tics": false,
+  "stretch": true,
+  "inline": true,
+  "hours12": false,
+  "live": false,
+  "sorting": "none",
+  "sort_local_top": false
+}
