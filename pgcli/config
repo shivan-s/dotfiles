@@ -188,13 +188,20 @@ Token.Output.EvenRow = ""
 # Named queries are queries you can execute by name.
 [named queries]
 # See the documentation on named queries for more examples.
-simple = select * from abc where a is not Null
 size = '''SELECT table_name AS "Table",
        pg_size_pretty(pg_total_relation_size(quote_ident(table_name))) AS "Size",
        pg_size_pretty(pg_indexes_size(quote_ident(table_name))) AS "Index Size"
 FROM information_schema.tables
 WHERE table_schema = 'public'
 ORDER BY pg_total_relation_size(quote_ident(table_name)) DESC'''
+waiting = '''SELECT datname, usename, wait_event_type, wait_event, pid, backend_type, query
+	FROM pg_stat_activity
+	WHERE wait_event_type IS NOT NULL
+	AND wait_event_type NOT IN ('Activity', 'Client');'''
+blocking = '''SELECT datname, usename, wait_event_type, wait_event, pid, pg_blocking_pids(pid) AS blocked_by, backend_type, query
+	FROM pg_stat_activity
+	WHERE wait_event_type IS NOT NULL
+	AND wait_event_type NOT IN ('Activity', 'Client');'''
 
 # DSN to call by -D option
 [alias_dsn]
